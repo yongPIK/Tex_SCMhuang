@@ -159,7 +159,7 @@ which therefore yields an alternative definition of SCM of the transition networ
 where $\mathcal{H}_{E}[W] = \sum_{i} p(\pi_i) \mathcal{H}_{E}^{\pi_i}[W_{\pi_i}]$. This quantity is dynamic in the sense that it quantifies both the static ordinal state frequencies and the dynamic state transition information stored in the system. 
 
 \section{Choice of embedding parameters} \label{sec:embeddings}
-{\color{red}We may leave out this section, if we plan a second paper which deals with embedding issue explicitly. }
+{\color{red}We may leave out this section, if we plan a second paper which deals with embedding issue explicitly. Or we have to present the following more precisely. }
 There are two important algorithmic parameters in constructing ordinal pattern transition networks, namely, embedding parameters of $D$ and $\tau$. In some cases, the choice of $D$ and $\tau$ may strongly change the results since $D$ and $\tau$ should compromise the time scales of the respective time series. In general applications of ordinal pattern analysis (i.e., permutation entropy computation $\mathcal{S}_O$), the choice of optimal $D$ and $\tau$ depends on the field of application, which requires experience of experts as systematically summarized in \cite{Riedl2013}.
 \begin{figure*}
 	\centering 
@@ -207,13 +207,6 @@ In this complexity-entropy plane, pattern frequency based SCM values lie around 
 
 For other pattern transition based SCMs of $\mathcal{C}_W$ vs $\mathcal{H}_W$ and $\mathcal{C}_E$ vs $\mathcal{H}_E$, we also find that the dots are distributed close to the respective maximum lines of $\mathcal{C}_{max}$. Increasing the embedding dimension further to $D=6, 7$, the dots are covered by the left uprising branch the parabola curve $\mathcal{C}_{max}$ (Fig. \ref{fig:fBmNoise}(b, d)). The definition of $\mathcal{C}_{E}$ and $\mathcal{H}_{E}$ takes into account the information of both pattern frequencies and pattern transitions, which results in that the dots are closer to $\mathcal{C}_{max}$ in a relative faster manner (Fig. \ref{fig:fBmNoise}(c, f)). The most interesting result is that no points lie in the bottom-right challenging regions of ambiguity. It is the deterministic transition behavior among patterns that makes the distinction from random noise. 
 
-%For a better comparison 
-%\begin{figure*}
-%	\centering 
-%	\includegraphics[width=2\columnwidth]{CompEntropy_fBm.pdf}
-%\caption{\small{Similar with Fig. \ref{fig:fBmNoise}. Complexity-entropy planes for example series of the fractional Brownian motion for varying Hurst exponent $H$. (a, d) $\mathcal{C}_O$ versus $\mathcal{H}_O$, (b, e) $\mathcal{C}_{W}$ versus $\mathcal{H}_{W}$, and (c, f) $\mathcal{C}_{E}$ versus $\mathcal{H}_{E}$. The dashed lines correspond to the maximum $\mathcal{C}_{max}$ and minimum complexity $\mathcal{C}_{min}$ values for a fixed value of the entropy. (a-c) for embedding $D = 4, 5$ and (d-f) for $D = 6$. }  \label{fig:CompEntrFBM}}
-%\end{figure*}
-
 Based on the results of Fig. \ref{fig:fBmNoise}, we conclude that pattern transition behavior provides novel insights for defining SCMs, which complement the traditional SCMs. 
 
 \section{Characterizing dynamical transitions} \label{sec:transi}
@@ -235,6 +228,16 @@ There is another improvement for $\mathcal{H}_E$ and $\mathcal{C}_E$ when the Lo
 \end{figure}
 Meanwhile, these jumps have also been observed when the system bifurcates from period-3 to period-6. 
 
+\section{Transitions in continuous system}
+The previous results have been further verified in the chaotic R\"ossler system \cite{Roessler1976}, namely, $(\dot{x}, \dot{y}, \dot{z}) = (-y-z, x+0.2y, b+z(x-5.7))$, where $b$ is the control parameter. There are some challenging problems for constructing OPTNs for time series from continuous systems. 
+
+
+\begin{figure*}
+	\centering 
+	\includegraphics[width=2\columnwidth]{rosslerEntropy.pdf}
+\caption{\small{Similar with the caption of Fig. \ref{fig:bifurcation}. Behavior of different SCMs for the R\"ossler system varying the control parameter $b$. (a) bifurcation diagram, (b) the maximal Lyapunov exponent $\lambda$, (c) pattern frequency based permutation entropy $\mathcal{S}_O$ and (d) complexity $\mathcal{C}_O$; (e) pattern transition frequency based entropy $\mathcal{S}_W$ by the globally normalized weighting matrix $\mathbf{W}$ and (f) the corresponding complexity $\mathcal{C}_W$. (g, h) are entropy $\mathcal{S}_E$ and complexity $\mathcal{C}_E$ which are similar with (e, f) but based on node-wise out-link normalized weighting matrix $\mathbf{W}$. Several major periodic windows have been highlighted by grey background. Vertical dotted lines correspond to periodic windows. } \label{fig:bifurRossler}}
+\end{figure*}
+
 \section{Real time series of fluid flows and ECG} \label{sec:time}
 In this section, we use two different experimental time series to demonstrate that SCMs successfully characterize the complexity properties of the underlying systems, showing distinct values for different dynamics. 
 
@@ -255,7 +258,7 @@ Qualitative similar results have been obtained for ECG recording series (Fig. \r
 
 
 \section{Discussions} \label{sec:con}
-In summary, we have proposed to include ordinal pattern transitions into the traditional ordinal pattern frequency analysis, generalizing statistical complexity measures for nonlinear time series analysis. In terms of the pattern transitions in the time series networks, permutation entropy relies on the static pattern frequency only. Here we suggest two slightly different ways to consider the effects of pattern transitions which are based on (i) a globally normalized weight transition matrix $\mathbf{W}$ and (ii) node-wise normalized transition matrix. 
+In summary, we have proposed to include ordinal pattern transitions into the traditional ordinal pattern frequency analysis, generalizing statistical complexity measures for nonlinear time series analysis. The pattern transition properties of the corresponding time series networks provide novel insights for permutation entropy which relies on the static pattern frequency only. In addition, we suggest two slightly different ways to consider the effects of pattern transitions which are based on (i) a globally normalized weight transition matrix $\mathbf{W}$ and (ii) node-wise normalized transition matrix. Note that the node-wise based SCMs consider both individual pattern frequencies and and the transition frequencies among them. 
 
 complex network approaches for nonlinear time series analysis \cite{ZouPR2018}. 
 

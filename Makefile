@@ -32,13 +32,13 @@ full : full_revision clean
 
 full_revision : $(SRCS)
 	$(LATEX)  $(SRCNAME)		 # Create   *.aux
-	$(BIBTEX) $(SRCNAME)
+#	$(BIBTEX) $(SRCNAME)
 	$(LATEX)  $(SRCNAME)		 # Finalize *.aux
-	$(LATEX)  $(SRCNAME)
+#	$(LATEX)  $(SRCNAME)
 #	$(LATEX)  $(SRCNAME)
 #	$(DVIPS) -o $(TARGET) $(SRCNAME)       # Create .ps from .dvi
 #	$(PDF) $(SRCNAME)			 # Create .pdf from .dvi
 
 clean :
-	-rm  *.log *.aux *.blg *Notes.bib *.bbl 
+	-rm  *.log *.aux *.blg *Notes.bib  
 

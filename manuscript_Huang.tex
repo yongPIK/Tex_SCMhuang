@@ -54,7 +54,7 @@ Given a one-dimensional time series $\{ x_i\}_{i=1, \ldots, L}$ comprising $L$ o
 
 The conceptually relatively simple computation of $P$ based on ordinal patterns for the underlying system prompts to another successful application of this framework in terms of statistical complexity measures (SCMs) \cite{kowalskiEntropy2011}. One common way of defining SCMs is taking the product of a normalized Shannon entropy and an associated measure of disequilibrium \cite{LopezPLA1995,kowalskiEntropy2011}, which captures specific organizational properties of structure and patterns in the observed process. Following the vast amount of previous work on this topic  \cite{rossoPRL2007,LopezPLA1995,kowalskiEntropy2011,Lange2013}, we consider here a variant of SCMs based on the concept of Jensen-Shannon divergence, which is defined as $\mathcal{C}_{JS}[P] = \mathcal{H}[P] \cdot  Q_{JS}[P, P_e]$, where $\mathcal{H}[P]$ is the normalized Shannon entropy and $Q_{JS}[P, P_e]$ is the so-called disequilibrium function measuring the distance of the given distribution $P$ to the uniform distribution $P_e$. Accordingly, we define $Q_{JS}[P, P_e] = Q_{0} \cdot JS[P, P_e]$ where $JS[P, P_e]$ is the Jensen-Shannon divergence between $P$ and $P_e$ and $Q_{0}$ is a normalization factor. Furthermore, the complexity--entropy plane $\mathcal{H} \times \mathcal{C}_{JS}$ has been intensively used to distinguish chaotic systems from stochastic ones \cite{rossoPRL2007}. The analysis of complexity--entropy planes has already taken advantage from the ordinal pattern based symbolic encoding of time series and has found various applications \cite{rossoPRL2007,kowalskiEntropy2011}. However, in the classical complexity--entropy analysis, there are some chaotic maps that could be easily confused with random noise because no clearly separable domains of values are available to differentiate those different types of dynamics as reported in Ref.~\cite{BorgesAMC2019}. So far, it remains a challenging task to disclose a possible non-monotonic relationship between complexity and entropy \cite{MartinPLA2003}. 
 
-It may be noted that in the above discussion on ordinal pattern based time series analysis methods, the transition behavior between patterns has largely remained unconsidered. Recently, OPTN representations have been proposed to precisely capture this transition behavior of the ordinal patterns \cite{MichaelChaos2015,KulpChaos2016,zhangSciRep2017,McCullough2017b,BorgesAMC2019}, which opens a broader perspective beyond the standard ordinal symbolic analysis of time series. In this framework, each ordinal pattern is considered as a vertex in a graph, and a directed and weighted edge connecting two patterns in the graph is established according to the corresponding transition frequency (i.e., the probability with which a given permutation is followed by a certain other one). One of the advantages of the resulting OPTNs is that we can obtain a pronounced distinction between different types of systems based on short time series only \cite{MichaelChaos2015,BorgesAMC2019}. 
+It may be noted that in the above discussion on ordinal pattern based time series analysis methods, the transition behavior between patterns {\color{red} has been discussed as early as in \cite{batesPLA1993}, but since then has largely remained unconsidered systematically from the viewpoint of time series network perspectives.} Recently, OPTN representations have been proposed to precisely capture this transition behavior of the ordinal patterns \cite{MichaelChaos2015,KulpChaos2016,zhangSciRep2017,McCullough2017b,BorgesAMC2019}, which opens a broader perspective beyond the standard ordinal symbolic analysis of time series. In this framework, each ordinal pattern is considered as a vertex in a graph, and a directed and weighted edge connecting two patterns in the graph is established according to the corresponding transition frequency (i.e., the probability with which a given permutation is followed by a certain other one). One of the advantages of the resulting OPTNs is that we can obtain a pronounced distinction between different types of systems based on short time series only \cite{MichaelChaos2015,BorgesAMC2019}. 
 
 In this work, we draw upon the recent success of both, complexity--entropy plane analysis and OPTNs, to generalize  existing SCMs by incorporating pattern transition probabilities. The advantages of this approach, which will be demonstrated in the course of this work, are as follows: (i) The modified SCMs allow for a clear distinction between different types of dynamics, which is demonstrated for time series from numerical models and experimental data. (ii) The generalized SCMs help to capture a consistent relationship between SCMs and chaoticity. (iii) All SCMs are sensitive to dynamical transitions along a bifurcation scenario, including period doubling, band merging, inner and outer crises. 
 
@@ -77,7 +77,7 @@ p_{\pi_i \to \pi_j} = \left \{ \begin{aligned}
 \noindent
 Note that the transition frequency of Eq.~\eqref{eq:localTp} is pattern (row) wise normalized. This case will be referred to as the node-wise out-link normalized transition matrix $\mathbf{W}$ in the following. In this way, it easily captures the heterogeneous behavior of both, (static) occurrence frequencies of different patterns and (dynamic) transition frequencies between patterns. 
 
-In addition to the proper normalization, we need to consider self-loops that may affect the numerical estimation of $\mathbf{W}$ especially for time series from continuous systems with a given sampling rate. For example, it has been demonstrated in Ref.~\cite{zhangSciRep2017} that there are about $99\%$ self-loops in time series of the R\"ossler system when integrated with a step size $h = 0.01$, while the about $1\%$ non-self-loops are hidden in $\mathbf{W}$. From this example, one may easily see that self-loops are related to the serial correlation of the time series under study \cite{BorgesAMC2019}. On the other hand, neglecting self-loops in $\mathbf{W}$ emphasizes the transition behavior between different patterns, which has therefore been adopted in most existing studies of complex networks for computational simplicity and theoretical concerns \cite{CostaADPhy2007}. Accordingly, we also remove self-loops in the present study before computing $\mathbf{W}$ while acknowledging that in other cases of stochastic processes and discrete systems, self-loops have been included in the analysis showing some interesting results \cite{BorgesAMC2019}. Arguably, whether to remove or to consider self-loops depends on the particular process under study. In any of the applications discussed in the rest of this paper, we have ensured that our results do not change qualitatively when including self-loops.
+In addition to the proper normalization, we need to consider self-loops that may affect the numerical estimation of $\mathbf{W}$ especially for time series from continuous systems with a given sampling rate. For example, it has been demonstrated in Ref.~\cite{zhangSciRep2017} that there are about $99\%$ self-loops in time series of the R\"ossler system when integrated with a step size $h = 0.01$, while the about $1\%$ non-self-loops are hidden in $\mathbf{W}$. From this example, one may easily see that self-loops are related to the serial correlation of the time series under study \cite{BorgesAMC2019}. {\color{red} From the viewpoint of statistical measures of complex network theory}, neglecting self-loops in $\mathbf{W}$ emphasizes the transition behavior between different patterns, which has therefore been adopted in most existing studies of complex networks for computational simplicity and theoretical concerns \cite{CostaADPhy2007}. Accordingly, we also remove self-loops in the present study before computing $\mathbf{W}$ while acknowledging that in other cases of {\color{red} highly correlated} stochastic processes and discrete systems, self-loops have been included in the analysis showing some interesting results \cite{BorgesAMC2019}. Arguably, whether to remove or to consider self-loops depends on the particular process under study. In any of the applications discussed in the rest of this paper, we have ensured that our results do not change qualitatively when including self-loops{\color{red}, and further numerical results will be provided in Supplementary Materials when necessary. }
 
 \subsection{Statistical complexity measures} \label{sec:SCM}
 
@@ -124,7 +124,7 @@ The normalized entropy is hence defined
 \begin{equation}
 \mathcal{H}_{W}[W] = \mathcal{S}_{W}[W] / \mathcal{S}_{W, max}, 
 \end{equation}
-where $\mathcal{S}_{W, max} = \log D! (D! - 1)$ as any self transitions are excluded. Furthermore, there are $D! (D! - 1)$ possible pattern transitions in the uniform distribution function $P_e$. Thus, in a full analogy with the permutation entropy based SCM, the Jensen-Shannon divergence is computed as $Q_{JS}[W] = Q_0 \cdot JS[W, P_e]$ with
+where $\mathcal{S}_{W, max} = \log D! (D! - 1)$ as any self transitions are excluded. Furthermore, there are $D! (D! - 1)$ possible pattern transitions in the uniform distribution function $P_e$. {\color{red}Note that when self loops are considered in the transition matrix, the normalization factor $\mathcal{S}_{W, max} = \log D! \times D!$ is used and there are $D! \times D!$ maximal accessible patterns in $P_e$. } Thus, in a full analogy with the permutation entropy based SCM, the Jensen-Shannon divergence is computed as $Q_{JS}[W] = Q_0 \cdot JS[W, P_e]$ with
 \begin{equation}
 JS [W, P_e] = \mathcal{S}_{W}[(W + P_e)/2] - \frac{1}{2}\mathcal{S}_{W}[W] - \frac{1}{2}\mathcal{S}_{W}[P_e]. 
 \end{equation}
@@ -147,7 +147,7 @@ and node-wise normalized transition entropy
 \begin{equation}
 \mathcal{H}_{E}^{\pi_i}[W_{\pi_i}] = \mathcal{S}_{E}^{\pi_i}[W_{\pi_i}] / \mathcal{S}_{E, max} 
 \end{equation}
-with $\mathcal{S}_{E, max} = \log (D! - 1)$. Note that this normalization factor is the same for all patterns, i.e., $\mathcal{S}_{E, max}^{\pi_i} = \mathcal{S}_{E, max}^{\pi_j}$. Therefore, the superscript index can be suppressed in the above definition. In addition, the node-wise Jensen-Shannon divergence is defined as $Q_{JS}^{\pi_i}[W_{\pi_i}] = Q_0 \cdot JS^{\pi_i} [W_{\pi_i}, P_e]$ with the disequilibrium measure
+with $\mathcal{S}_{E, max} = \log (D! - 1)$. Note that this normalization factor is the same for all patterns, i.e., $\mathcal{S}_{E, max}^{\pi_i} = \mathcal{S}_{E, max}^{\pi_j}$. Therefore, the superscript index can be suppressed in the above definition. {\color{red}When self loops are considered in the transition matrix, the normalization factor $\mathcal{S}_{E, max} = \log D! $ is used.} In addition, the node-wise Jensen-Shannon divergence is defined as $Q_{JS}^{\pi_i}[W_{\pi_i}] = Q_0 \cdot JS^{\pi_i} [W_{\pi_i}, P_e]$ with the disequilibrium measure
 \begin{eqnarray}
 &&JS^{\pi_i} [W_{\pi_i}, P_e] = \nonumber \\
 &&\quad \mathcal{S}_{E}^{\pi_i}[(W_{\pi_i} + P_e)/2] - \frac{1}{2}\mathcal{S}_{E}^{\pi_i}[W_{\pi_i}] - \frac{1}{2}\mathcal{S}_{E}^{\pi_i}[P_e]. 
@@ -165,12 +165,12 @@ where $\mathcal{H}_{E}[W] = \sum_{i} p_{\pi_i} \mathcal{H}_{E}^{\pi_i}[W_{\pi_i}
 \section{Numerical examples}\label{sec:results1}
 
 \subsection{Choice of embedding parameters} \label{sec:embeddings}
-There are two important algorithmic parameters in constructing OPTNs -- the embedding parameters $D$ and $\tau$. The choice of $D$ and $\tau$ can markedly affect the results for the associated SCMs since $D$ and $\tau$ should compromise the essential time scales of the dynamics in the underlying time series. In common applications of ordinal pattern analysis (e.g., the estimation of the permutation entropy $\mathcal{S}_O$), the choice of optimal (or just pragmatic) values of $D$ and $\tau$ depends on the field of application as systematically summarized in Ref.~\cite{Riedl2013}.
+There are two important algorithmic parameters in constructing OPTNs -- the embedding parameters $D$ and $\tau$. The choice of $D$ and $\tau$ can markedly affect the results for the associated SCMs since $D$ and $\tau$ should compromise the essential time scales of the dynamics in the underlying time series. In common applications of ordinal pattern analysis (e.g., the estimation of the permutation entropy $\mathcal{S}_O$), the choice of optimal (or just pragmatic) values of $D$ and $\tau$ depends on the field of application as systematically summarized in Ref.~\cite{Riedl2013}. {\color{red}Throughout this work, we have considered $D$ as a kind of free parameter which is varied as $D \in [2, 6]$, although we illustrate the results of $D = 6$ mainly due to the page limit of the paper. The choice of $\tau$ originates from the fact that lower entropy values are expected for periodic windows of the logistic map as it has been illustrated in Fig. \ref{fig:embed}. }
 
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{period4_logisticExample.pdf}
-\caption{\small{Example of a period-4 time series demonstrating the effects of different choices of the embedding parameters $D$ and $\tau$. (a) Time series comprising 30 iterations of the period-4 orbit. The corresponding ordinal pattern series are shown for different combinations of $D$ and $\tau$: (b) $D = \tau = 3$, (c) $D = \tau = 4$, (d) $D = \tau = 5$, and (e) $D = \tau = 6$. The respective permutation entropy values normalized by $\log D!$ as in Eq.~\eqref{eq:Ho} are indicated in the insets of each panel. Panels (f)-(i) show the corresponding OPTNs. The weights of directed edges are not shown (recall that two slightly different normalizations are considered in this work). Note that in panel (g), there exist exclusively self-loops since $D = \tau = 4$ results in a unique, constant pattern. Missing patterns are suppressed.}
+\caption{\small{Example of a period-4 time series demonstrating the effects of different choices of the embedding parameters $D$ and $\tau$. (a) Time series comprising 30 iterations of the period-4 orbit. The corresponding ordinal pattern series are shown for different combinations of $D$ and $\tau$: (b) $\tau = D = 3$, (c) $\tau = D = 4$, (d) $ \tau = D = 5$, and (e) $\tau = D = 6$. The respective permutation entropy values normalized by $\log D!$ as in Eq.~\eqref{eq:Ho} are indicated in the insets of each panel. Panels (f)-(i) show the corresponding OPTNs. The weights of directed edges are not shown (recall that two slightly different normalizations are considered in this work). Note that in panel (g), there exist exclusively self-loops since $\tau = D = 4$ results in a unique, constant pattern. Missing patterns are suppressed.}
 \label{fig:embed}}
 \end{figure*}
 
@@ -179,10 +179,10 @@ As an illustrative example highlighting the important roles of $D$ and $\tau$ fo
 x_{i+1}=rx_i(1-x_i) 
 \end{equation}
 \noindent
-with $r= 3.5$. For the sake of simplicity, we choose $D = \tau $. In this case, Fig.~\ref{fig:embed} demonstrates that the resulting ordinal pattern sequences are significantly affected by the different parameter settings, which further result in different permutation entropy values $\mathcal{H}_O$. For instance, only one unique ordinal pattern is observed when $D = \tau = 4$ (Fig.~\ref{fig:embed}(c,g)) resulting in $\mathcal{H}_O = 0$, which is due to the coverage of exactly one full period by the particular embedding parameters. Other values of $D$ and $\tau$ however yield non-zero entropy values. The results of Fig.~\ref{fig:embed} may raise concern since different choices of $D$ and $\tau$ will change the placement of the system in the complexity--entropy plane. In the special case of the logistic map, we do not have a unique choice of $D$ and $\tau$ for periodic windows when the control parameter $r$ is varied. In such cases, we should focus more on the transitions between different dynamical regimes. In the following, we will show that the results are robust when the control parameter is systematically changed while keeping the same embedding parameters.
+with $r= 3.5$. {\color{red}In this example, we propose to choose $\tau = D$, which may largely capture the period-4 and period-3 windows of the logistic map. More specifically,} Fig.~\ref{fig:embed} demonstrates that the resulting ordinal pattern sequences are significantly affected by the different parameter settings, which further result in different permutation entropy values $\mathcal{H}_O$. For instance, only one unique ordinal pattern is observed when $\tau = D = 4$ (Fig.~\ref{fig:embed}(c, g)) resulting in $\mathcal{H}_O = 0$, which is due to the coverage of exactly one full period by the particular embedding parameters. Other values of $D$ and $\tau$ however yield non-zero entropy values. The results of Fig.~\ref{fig:embed} may raise concern since different choices of $D$ and $\tau$ will change the placement of the system in the complexity--entropy plane{\color{red}, which is an open problem for ordinal pattern analysis \cite{AmigoPTRSA2014,Riedl2013}.} In the special case of the logistic map, we do not have a unique choice of $D$ and $\tau$ for {\color{red}all different} periodic windows when the control parameter $r$ is varied. When the control parameter $r$ is changed, we should focus more on the transitions between different dynamical regimes. 
+% In the following, we will show that the results are robust when the control parameter is systematically changed while keeping the same embedding parameters. 
 
 \subsection{Results for four typical dynamical regimes} \label{sec:four}
-
 We further illustrate the potential of the proposed SCMs to characterize the logistic map with the control parameter $r$ varying in the range $[3.5, 4]$ with a step size of $\Delta r = 0.001$. In this range of $r$, various dynamical regimes and transitions between them can be found, for instance, period doubling cascades, band merging points, inner and outer crises, and intermittency \cite{Kantz97}, which has made this system serving as a paradigmatic model for assessing nonlinear time series analysis methods \cite{MarwanPLA2009}. 
 
 As a first step, we consider four representative regimes that can be observed at particular values of the control parameter $r$, corresponding to either periodic dynamics or chaotic dynamics close to band merging, in some laminar state, and at the outer crisis. In all examples, we will consistently use the embedding parameters $D = \tau = 6$. In general, we emphasize that a higher value of $D$ leads to a larger variety of ordinal patterns and, hence, a more robust statistics. On the other hand, for evaluating the statistical properties of either pattern frequencies or transition frequencies, this comes on the cost of requiring increasingly longer time series. In the following, we will use realizations of the logistic map comprising $L = 10^6$ iterations (after removing the first $1000$ iterations of each realization which might reflect transient behavior of the system before reaching its respective attractor). 
@@ -214,7 +214,7 @@ In order to put our previous results into a broader context, we next show the co
 
 As already stated above, when only one unique ordinal pattern is identified in a given time series, all SCMs take a value of $0$, which is reasonable since only self-loops are observed. This however happens only if the embedding parameters are chosen such that they exactly coincide with the periodicity of a certain periodic window (see Fig.~\ref{fig:embed}(g)). Another practical aspect concerns the data requirements for computing entropies and complexity measures. For a reliable estimation of SCMs, a pragmatic condition on the length $L$ of the time series to be sufficiently larger than $D!$ \cite{rossoPRL2007,kowalskiPhyD2007} has been satisfied in our setting for $D \leq 7$. In the particular example of the logistic map, one may easily generate much longer realizations, which however do not improve the obtained entropy and SCM estimates significantly (as we have tested for $L \leq 5 \times 10^6$, not shown). 
 
-In previous works, SCMs have been applied to distinguish chaos from noise by employing the concept of complexity--entropy plane~\cite{rossoPRL2007}. Generalizing this idea to our OPTN based SCMs, we can define three such planes showing the statistical complexity measures ($\mathcal{C}_O$, $\mathcal{C}_W$ and $\mathcal{C}_E$) as a function of the corresponding normalized entropy values ($\mathcal{H}_O$, $\mathcal{H}_W$ and $\mathcal{H}_E$). The three SCMs characterize both randomness and correlation structure in a time series, which as a consequence result in a non-trivial dependence on the associated entropy values. Specifically, chaotic systems present high complexity while stochastic systems have lower values of complexity, hence ideally appearing in distinct regions of the complexity--entropy plane~\cite{rossoPRL2007}. Furthermore, for a given entropy value, it has been shown previously that at a given entropy value, the range of possible SCM values is bound by a minimum $\mathcal{C}_{min}$ and a maximum $\mathcal{C}_{max}$. A general algorithm for computing these bounds has been provided in Ref.~\cite{martinPhyA2006}. 
+In previous works, SCMs have been applied to distinguish chaos from noise by employing the concept of complexity--entropy plane~\cite{rossoPRL2007}. Generalizing this idea to our OPTN based SCMs, we can define three such planes showing the statistical complexity measures ($\mathcal{C}_O$, $\mathcal{C}_W$ and $\mathcal{C}_E$) as a function of the corresponding normalized entropy values ($\mathcal{H}_O$, $\mathcal{H}_W$ and $\mathcal{H}_E$). The three SCMs characterize both randomness and correlation structure in a time series, which as a consequence result in a non-trivial dependence on the associated entropy values. Specifically, chaotic systems present high complexity while stochastic systems have lower values of complexity, hence ideally appearing in distinct regions of the complexity--entropy plane~\cite{rossoPRL2007}. Furthermore, {\color{red}it has been shown previously that at a given entropy value,} the range of possible SCM values is bound by a minimum $\mathcal{C}_{min}$ and a maximum $\mathcal{C}_{max}$. A general algorithm for computing these bounds has been provided in Ref.~\cite{martinPhyA2006}. 
 
 Figure~\ref{fig:CElogistic} shows the complexity--entropy planes for embedding parameters $D = \tau$ varied between $4$ and $6$. We emphasize that the results are qualitatively similar when $D$ and $\tau$ are varied in the range $\{3,\ldots, 7\}$. Furthermore, it is notable that the values of $\mathcal{C}_{max}$ depend on the embedding dimension $D$ since $D$ determines the number of patterns and pattern transitions which are considered in the definition of SCMs. By contrast, $\mathcal{C}_{min}$ shows less dependence on $D$. 
 
@@ -226,10 +226,9 @@ Figure~\ref{fig:CElogistic} shows the complexity--entropy planes for embedding p
 
 First of all, we recover the known result that pattern frequency based SCM values lie close to the maximum $\mathcal{C}_{max}$, while the displacements of the estimated values from their theoretical upper bounds depend on the embedding dimension $D$ as shown in Fig.~\ref{fig:CElogistic}(a,d). Most notably, we find many combinations of complexity--entropy values in the lower right part of the plane (high entropy, low complexity), which have been highlighted by rectangles of dotted lines. This region of the plane is challenging for SCMs to distinguish between chaotic time series and random noise~\cite{BorgesAMC2019} and is in our case occupied by values corresponding to chaotic regimes of the logistic map at large $r$ values. The corresponding ambiguity results from the fact that both $\mathcal{H}_O$ and $\mathcal{C}_O$ only take static information in the sense that only pattern frequencies have been considered in their definitions. 
 
-For our new pattern transition based SCMs, we find that in the complexity--entropy planes $\mathcal{H}_W \times \mathcal{C}_W$ and $\mathcal{H}_E \times \mathcal{C}_E$, the results for the logistic map again closely align with the theoretical upper bounds $\mathcal{C}_{max}$. When increasing the embedding dimension, the estimated values approach the theoretical $\mathcal{C}_{max}$ curve more and more closely and essentially cover exclusively the left uprising branch of the curve for the SCM based solely on transition frequencies (Figs.~\ref{fig:CElogistic}(b, e) and \ref{fig:CElogistic}(c, f)), which distinctively differs from the original permutation entropy based SCM. Specifically, the definition of $\mathcal{C}_{E}$ and $\mathcal{H}_{E}$ takes information on both, pattern frequencies and transition frequencies into account, which results in the obtained SCM values aligning even more closely with $\mathcal{C}_{max}$ already at lower embedding dimensions (Fig.~\ref{fig:CElogistic}(c, f)). In our opinion, the most interesting result is, however, that we do not find any values in the lower right part of the plane, which for the classical SCM based on permutation entropy would present the challenging region of possible ambiguity between deterministic-chaotic and stochastic dynamics. We therefore suggest that it is the deterministic transition behavior among patterns that allows an improved distinction from random noise. 
+For our new pattern transition based SCMs, we find that in the complexity--entropy planes $\mathcal{H}_W \times \mathcal{C}_W$ and $\mathcal{H}_E \times \mathcal{C}_E$, the results for the logistic map again closely align with the theoretical upper bounds $\mathcal{C}_{max}$. When increasing the embedding dimension, the estimated values approach the theoretical $\mathcal{C}_{max}$ curve more and more closely and essentially cover exclusively the left uprising branch of the curve for the SCM based solely on transition frequencies (Figs.~\ref{fig:CElogistic}(b, e) and \ref{fig:CElogistic}(c, f)), which distinctively differs from the original permutation entropy based SCM. Specifically, the definition of $\mathcal{C}_{E}$ and $\mathcal{H}_{E}$ takes information on both, pattern frequencies and transition frequencies into account, which results in the obtained SCM values aligning even more closely with $\mathcal{C}_{max}$ already at lower embedding dimensions (Fig.~\ref{fig:CElogistic}(c, f)). In our opinion, the most interesting result is, however, that we do not find any values in the lower right part of the plane, which for the classical SCM based on permutation entropy would present the challenging region of possible ambiguity between deterministic-chaotic and stochastic dynamics. {\color{red}On the other hand, there are many points in the lower left part of the plane showing small values of $\mathcal{C}_{W}$ and $\mathcal{C}_{E}$. } We therefore suggest that it is the deterministic transition behavior among patterns that allows an improved distinction from random noise. 
 
 In order to further analyze the capability of our modified complexity--entropy planes to distinguish chaotic from stochastic dynamics, we compare the results for the logistic map with those obtained for fractional Brownian motion (fBm), i.e., stochastic processes with long-range temporal correlations. Specifically, for an fBm process the long-range correlations of the process are uniquely characterized by the Hurst exponent $H$ when positively correlated (persistence) for $1/2 < H < 1$, while being suppressed (anti-persistence) for $0< H < 1/2$. $H=1/2$ corresponds to the classical Brownian motion. Similar to the previous case of the logistic map with varying control parameter $r$, we generate time series for varying $H \in (0, 1)$ with a step size of $\Delta H=0.05$ and present the resulting complexity--entropy planes in Fig.~\ref{fig:CEfBm}. Moreover, since fBm series in the persistent regime are nonstationary, we further transform all fBm realizations into stationary time series by employing first-order difference filtering, i.e., by considering the increments $x_{i+1}- x_i$. The transformed series are commonly referred to as fractional Gaussian noise (fGn), and the associated complexity--entropy planes are shown in Fig.~\ref{fig:CEfGn}. Notably, fGn retains the long-range correlations and Gaussian probability density function (PDF) of the underlying fBm process. For a discussion on practical concerns regarding time delay embedding of fBm and fGn processes, we refer to Ref.~\cite{Zou2015}. 
-
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{CompEntropy_fBm.pdf}
@@ -242,7 +241,7 @@ In order to further analyze the capability of our modified complexity--entropy p
 \caption{\small{(Color online) Same as in Fig.~\ref{fig:CElogistic}, but for fractional Gaussian noise with a Hurst exponent $H \in (0, 1)$ varying with a step size of $\Delta H=0.05$. Note that only a small region of the complexity--entropy planes is covered in this case. }  \label{fig:CEfGn}}
 \end{figure*}
 
-Comparing the results for both types of stochastic processes with those for the logistic map, a few important observations are made. First of all, the traditional pattern frequency based SCM values as originally reported by Rosso and co-workers \cite{RossoPRE2007,rossoPRL2007} are well reproduced as expected (Figs.~\ref{fig:CEfBm}(a, d) and \ref{fig:CEfGn}(a, d)). Second, all complexity--entropy pairs of fBm and fGn clearly differ from the theoretical maximum complexity values, which does not change with increasing embedding dimension $D$. Especially for the new OPTN based SCMs, we find a partial overlap between the entropy values of fBm and the logistic map, while the associated SCM values are however clearly distinct except for the cases with the lowest entropy, which correspond to the most nonstationary situations ($H$ close to 1). Accordingly, we suggest that combining information on the position in the complexity--entropy plane and on the stationarity could allow a clear distinction between chaotic and stochastic dynamics even in those extreme situations. Notably, for the stationary fGn, all entropy measures are confined to very high entropy and low complexity values -- a range where no combinations have been found for the new transition frequency based SCMs for the logistic map. 
+Comparing the results for both types of stochastic processes with those for the logistic map, a few important observations are made. First of all, the traditional pattern frequency based SCM values as originally reported by Rosso and co-workers \cite{RossoPRE2007,rossoPRL2007} are well reproduced as expected (Figs.~\ref{fig:CEfBm}(a, d) and \ref{fig:CEfGn}(a, d)). Second, all complexity--entropy pairs of fBm and fGn clearly differ from the theoretical maximum complexity values, which does not change with increasing embedding dimension $D$. Especially for the new OPTN based SCMs, we find a partial overlap between the entropy values of fBm and the logistic map, while the associated SCM values are however clearly distinct except for the cases with the lowest entropy, which correspond to the most nonstationary situations ($H$ close to 1). {\color{red}Taking into account the effects of self loops in the transition matrix, the results of Fig. \ref{fig:CEfBm} do not change significantly although the SCM values extend slightly in the left half of the complexity--entropy plane as $H$ is increased, which are shown in Fig. S1 of Supplementary Material (SM). Note that the discriminatory power of } Accordingly, we suggest that combining information on the position in the complexity--entropy plane and on the stationarity could allow a clear distinction between chaotic and stochastic dynamics even in those extreme situations. Notably, for the stationary fGn, all entropy measures are confined to very high entropy and low complexity values -- a range where no combinations have been found for the new transition frequency based SCMs for the logistic map. {\color{red}In the case of fGn, almost the same complexity--entropy plane has been obtained when self loops are included, which has been shown in Fig. S3 of SM. }
 
 Taken all reported results on the complexity--entropy planes for the logistic map, fBm and fGn together, we conclude that the modified SCMs indeed allow distinguishing chaotic from stochastic dynamics more precisely than the original approach. We therefore suggest that the pattern transition behavior encoded in the OPTNs provides novel insights that can be exploited in terms of SCMs that complement their traditional counterparts. 
 
@@ -284,584 +283,63 @@ while varying the control parameter $b$. From a conceptual perspective, construc
 
 
 \section{Real-world examples} \label{sec:time}
-
 While we have previously demonstrated the suitability of OPTN based SCMs for tracing changes in dynamical complexity for time series from deterministic dynamical systems, in the following we will use two different sets of experimental time series to demonstrate that SCMs also successfully characterize the complexity properties of real-world systems, showing distinct values for different types of dynamics. 
 
 The first example originates from a laboratory fluid experiment of baroclinic instability which is used to study patterns of cyclones and anticyclones in the Earth's atmosphere~\cite{Read_jfm_1992,ZouEPJST2008}. Depending on the parameters of rotation rate, temperature difference, viscosity and fluid density, this experimental system exhibits a rich variety of flow regimes. In particular, we focus on the following regimes: 
 \begin{enumerate}[(i)]
-\item {Stable fluid:} The temperature signal of the stable flow exhibits periodic oscillations as the wave drift patterns arrive at the fixed point of measurements. 
-\item {Quasi-periodic 2-frequency amplitude vacillation:} This case is identified as a 2-frequency quasi-periodic amplitude flux. The wave drift is composed of slow and regular oscillations in the temperature signal, but a fast modulation in the amplitude is also visible. AV-2 is characterized by a periodic growth and drop in wave amplitude with little change in waveform. 
-\item {Quasi-periodic 3-frequency amplitude vacillation:} For the sake of completeness, we also analyze a quasi-periodic 3-frequency amplitude vacillation time series. Unlike for the other studied cases, this time series has not been obtained from experimental results, but from a three-dimensional direct numerical simulation of the air-filled rotating baroclinic instability experiment~\cite{Read_jfm_1992}. 
-\item {Modulated amplitude vacillation:} This case is identified as a low-dimensional stream, chaotically modulated and with waves of varying amplitudes. Amplitude modulation results in a complex temperature dynamics.
+\item {Stable fluid (SW):} The temperature signal of the stable flow exhibits periodic oscillations as the wave drift patterns arrive at the fixed point of measurements. 
+\item {Quasi-periodic 2-frequency amplitude vacillation (AV-2):} This case is identified as a 2-frequency quasi-periodic amplitude flux. The wave drift is composed of slow and regular oscillations in the temperature signal, but a fast modulation in the amplitude is also visible. AV-2 is characterized by a periodic growth and drop in wave amplitude with little change in waveform. 
+\item {Quasi-periodic 3-frequency amplitude vacillation (AV-3):} For the sake of completeness, we also analyze a quasi-periodic 3-frequency amplitude vacillation time series. Unlike for the other studied cases, this time series has not been obtained from experimental results, but from a three-dimensional direct numerical simulation of the air-filled rotating baroclinic instability experiment~\cite{Read_jfm_1992}. 
+\item {Modulated amplitude vacillation (MAV):} This case is identified as a low-dimensional stream, chaotically modulated and with waves of varying amplitudes. Amplitude modulation results in a complex temperature dynamics.
 \end{enumerate}
+{\color{red}One temperature time series of each flow regime has been measured at $2$s for periods of up to $9 \times 10^4$s. Therefore, each recording consists of $N = 45000$ data points. The examples of segmented time series have been shown in Fig. \ref{tseriesFluid} for the illustration purpose. Further details of the lower dimensional chaotic properties have been reported in \cite{Read_jfm_1992,thiel2004a}. }
+\begin{figure}
+	\centering 
+	\includegraphics[width=\columnwidth]{TS_fluid.pdf}
+\caption{\small{Sample segments of the temperature recordings from the flow experiment: (a) SW, (b) AV-2, (c) AV-3 and (d) MAV. The vertical axis is temperature $T$. } \label{tseriesFluid}}
+\end{figure}
 
-The second set of example time series comprises physiological signals of human electrocardiogram (ECG) recordings collected from patients from MIT-BIH Database and the Creighton University Cardiac Center \cite{GoldbergerMITBIH2000}. Heart rate variability suffering from ventricular arrhythmia presents a physiologically highly significant anomaly that is still relatively poorly understood from a dynamical system perspective, showing rich nonlinear properties. In this work, we focus on three different states: normal sinus rhythm (SR), ventricular tachycardia (VT) and ventricular fibrillation (VF) \cite{smallCSF2002}. From the data base of ECG recordings during various rhythms, we selected 14 time series showing sinus rhythm (SR) prior to onset of arrhythmia, 12 time series of VT and 17 of VF. The ECG recordings have been annotated with SR, VT and VF by skilled cardiologists on the basis of waveform morphology. Each recording consists of at least $10,000$ data points (20~s) in length at a 250~Hz sampling frequency. 
+The second set of example time series comprises physiological signals of human electrocardiogram (ECG) recordings collected from patients from MIT-BIH Database and the Creighton University Cardiac Center \cite{GoldbergerMITBIH2000}. Heart rate variability suffering from ventricular arrhythmia presents a physiologically highly significant anomaly that is still relatively poorly understood from a dynamical system perspective, showing rich nonlinear properties \cite{smallCSF2002}. {\color{red}The ECG recordings have been measured at a 250~Hz sampling frequency for about 8.5 minutes \cite{GoldbergerMITBIH2000}. From these long term recordings, we focus on three different rhythmic states of normal sinus rhythm (SR), ventricular tachycardia (VT) and ventricular fibrillation (VF) \cite{smallCSF2002}, which have been annotated by skilled cardiologists on the basis of waveform morphology. To reduce the possible finite size effects in calculating SCMs, we choose each time series of at least $10000$ time points. In consequence, out of 18 different patients we obtain 14 time series showing sinus rhythm (SR) prior to onset of arrhythmia, 12 records of VT and 17 records of VF. After the annotations, each time series may have different length, ranging from $14600$ to $159600$ data points in SR, $16000\sim 132000$ in VT, and $14500 \sim 124000$ in VF. We do not apply any preprocessing to the data, except checking the length requirements. We show some sections of time series of each case in Fig. \ref{tseriesECG}. } 
+\begin{figure}
+	\centering 
+	\includegraphics[width=\columnwidth]{TS_ECG.pdf}
+\caption{\small{Three representative ECG recording sections (randomly chosen from different rhythmic states): (a) sinus rhythm (SR), (b) VF and VT. The horizontal axis of each panel is the datum number (at 250 Hz) and the vertical axis is ECG surface voltage (in milli-volts). } \label{tseriesECG}}
+\end{figure}
 
-For choosing the embedding parameters for both sets of example time series, we follow the suggestions from earlier studies~\cite{ZouEPJST2008,smallCSF2002}. Although we are facing the inevitable presence of nonstationarity and noise in the experimental data, we have verified that the following results do not change significantly while our embedding parameters are varied. In particular, we have treated the embedding dimension as a free parameter which has been varied in the range of $D = 2, 3, \ldots, 7$, while the embedding delay $\tau$ has been kept fixed as follows. In the case of temperature time series from the fluid experiments, $\tau_{i} = 218$~s for the stable solution, $\tau_{ii} = 136.5$~s  for AV-2, $\tau_{iii} = 185.625$~s for AV-3, and $\tau_{iv} = 118$~s for MAV. For the ECG time series, we consistently use an embedding delay of $\tau = 5$ time steps. The results have been averaged over all subjects. 
+For choosing the embedding parameters for both sets of example time series, we follow the suggestions from earlier studies~\cite{ZouEPJST2008,smallCSF2002}. Although we are facing the inevitable presence of nonstationarity and noise in the experimental data, we have verified that the following results do not change {\color{red}qualitatively} while the embedding parameters are varied. In particular, we have treated the embedding dimension as a free parameter which has been varied in the range of $D = 2, 3, \ldots, 6$, while the embedding delay $\tau$ has been {\color{red} determined by the first zero of the autocorrelation function \cite{Kantz97}. In the case of temperature time series from the fluid experiments, $\tau_{1} = 110$ time steps (data points) for SW, AV-2 and AV-3, while $\tau_{2} = 60$ for MAV,  which have been consistent with the literature \cite{Read_jfm_1992,thiel2004a}.} For the ECG time series, we consistently use an embedding delay of $\tau = 5$ time steps as suggested in \cite{smallCSF2002}. The results have been averaged over all subjects. 
 
-In both sets of time series, the OPTN based SCMs enhance our understanding of the underlying nonlinear system, which can be seen from the results summarized in Fig.~\ref{fig:fluid}. For the fluid data (Fig.~\ref{fig:fluid}(a)), $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$ all show consistent changes of the complexity and entropy values between stable wave solution (SW), quasi-periodic 2-frequency amplitude vacillation (AV-2), quasi-periodic 3-frequency amplitude vacillation (AV-3) and chaotic modulated amplitude vacillation (MAV). Specifically, the complexity of these four cases has the following order: SW has the lowest complexity since it shows periodic oscillations with trivial recurrence, while MAV has the highest complexity since it presents chaotically modulated amplitude vacillation. Quasiperiodic states exhibit intermediate complexity values since these two cases have non-trivial recurrences while still featuring a certain degree of regularity. In our case, AV-3 presents a higher complexity than AV-2, which should however be interpreted with care since the AV-2 series originates from an experiment, while the AV-3 series has been taken from a numerical simulation of the same system (hence, there may be a certain level of observational noise present in AV-2 but not in AV-3). The order of complexity values between periodic, quasiperiodic and chaotic solutions still holds for $\mathcal{C}_O$, but the corresponding values become very similar. In particular, it becomes hard for $\mathcal{C}_O$ to identify the difference between AV-2 and AV-3. 
-
-Qualitatively similar results are obtained for the ECG recordings (Fig.~\ref{fig:fluid}(b)). Clearly, different ECG recordings exhibit remarkably distinct complexity values. Specifically, SR recordings show very pronounced the highest values of $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$, reflecting the existence of significant spectral power in a rather broad frequency band between 50 and 100 beats/min in the signals \cite{smallCSF2002}. On the other hand, the complexity of VT has the smallest value, even lower than for the case of VF. Unlike the other five measures, we note, however, that SR shows the smallest value of $\mathcal{C}_O$ while VT and VF have comparable values that are higher than for SR. This difference may be explained by the fact that unlike the two other OPTN based SCMs, this measure only takes static information of pattern frequencies into account and may therefore not be able to properly distinguish subtle differences reflected in the temporal order of patterns.
-
+In both sets of time series, the OPTN based SCMs enhance our understanding of the underlying nonlinear system, which can be seen from the results summarized in Figs. (\ref{fig:fluid}, \ref{fig:ecg}). For the fluid data (Fig.~\ref{fig:fluid}), $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$ all show consistent changes of the complexity and entropy values between stable wave solution (SW), quasi-periodic 2-frequency amplitude vacillation (AV-2), quasi-periodic 3-frequency amplitude vacillation (AV-3) and chaotic modulated amplitude vacillation (MAV). Specifically, the complexity of these four cases has the following order: SW has the lowest complexity since it shows periodic oscillations with trivial recurrence, while MAV has the highest complexity since it presents chaotically modulated amplitude vacillation. Quasiperiodic states exhibit intermediate complexity values since these two cases have non-trivial recurrences while still featuring a certain degree of regularity. In our case, AV-3 presents a higher complexity than AV-2, which should however be interpreted with care since the AV-2 series originates from an experiment, while the AV-3 series has been taken from a numerical simulation of the same system (hence, there may be a certain level of observational noise present in AV-2 but not in AV-3). The order of complexity values between periodic, quasiperiodic and chaotic solutions still holds for $\mathcal{C}_O$, but the corresponding values become very similar. In particular, it becomes hard for $\mathcal{C}_O$ to identify the difference between AV-2 and AV-3. 
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{fluidExample.pdf}
-\caption{\small{OPTN based entropy and SCM characteristics for experimental fluid data (a) and human ECG recordings (b). The results have been averaged over embedding dimensions in the range of $D = 2, 3, \ldots, 7$. In (a), stable wave (SW, $\blacklozenge$), quasiperiodic 2-frequency amplitude vacillation (AV-2, $\bullet$), quasiperiodic 3-frequency amplitude vacillation (AV-3, $\blacktriangle$) and chaotic modulated amplitude vacillation (MAV, $\blacksquare$) are distinguished. In (b), results are shown for normal sinus rhythm (SR, $\blacktriangle$), ventricular tachycardia (VT, $\blacklozenge$) and ventricular fibrillation (VF, $\bullet$). } \label{fig:fluid}}
+\caption{\small{OPTN based entropy and SCM characteristics for experimental fluid data, which are shown for embedding dimensions of $D = 4, 5, 6$. In all subfigures, stable wave (SW, $\blacklozenge$), quasiperiodic 2-frequency amplitude vacillation (AV-2, $\bullet$), quasiperiodic 3-frequency amplitude vacillation (AV-3, $\blacktriangle$) and chaotic modulated amplitude vacillation (MAV, $\blacksquare$) are distinguished. } \label{fig:fluid}}
 \end{figure*}
+
+Qualitatively similar results are obtained for the ECG recordings, as shown in Fig.~\ref{fig:ecg} for three different embedding dimensions. Generally speaking, different ECG recordings exhibit remarkably distinct complexity values since the ensemble medians are well separated between different time series groups of SR, VF and VT as shown by the box plots in Fig. \ref{fig:ecg}. More specifically, SR recordings show very pronounced the highest median of $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$, reflecting the existence of significant spectral power in a rather broad frequency band between 50 and 100 beats/min in the signals \cite{smallCSF2002}. On the other hand, the complexity of VT has the smallest value, even lower than for the case of VF. Unlike the other five measures, we note, however, that SR shows the smallest median values of $\mathcal{C}_O$ while VT has the largest values (Fig. \ref{fig:ecg}(b)). 
+
+ {\color{red}Meanwhile, we find mild dependence of the discriminatory power of $\mathcal{C}_O$ and $\mathcal{C}_W$ on the embedding dimension $D$. In particular, in the case of $D=6$ the median values of $\mathcal{C}_O$ of VF are comparable to that of VT (Fig.~\ref{fig:ecg}(b)). On the other hand for $D=4$, the median values of $\mathcal{C}_W$ are all comparable for SR, VF and VT (Fig.~\ref{fig:ecg}(d)). This insufficiency of $\mathcal{C}_O$ and $\mathcal{C}_W$ due to embedding may be explained by the fact that $\mathcal{C}_O$ takes only static pattern frequencies into account, while $\mathcal{C}_W$ considers dynamic pattern transitions, which may therefore not be able to properly distinguish subtle differences reflected in the temporal order of patterns. In contrast, $\mathcal{C}_E$ considers both individual pattern frequencies and dynamic pattern transition frequencies. } 
+\begin{figure*}
+	\centering 
+	\includegraphics[width=2\columnwidth]{ecgExample.pdf}
+\caption{\small{Box plots for OPTN based entropy and SCM characteristics for human ECG recordings, showing well separated medians for each subject group SR, VF and VT. Entropy and SCM scores are shown for embedding dimensions of $D = 4, 5, 6$. } \label{fig:ecg}}
+\end{figure*}
+
 
 
 \section{Conclusions} \label{sec:con}
 In summary, we have proposed to expand the traditional ordinal pattern frequency analysis by also including ordinal pattern transitions, thereby generalizing existing statistical complexity measures for nonlinear time series analysis. The pattern transition properties encoded in the underlying time series networks allow to gain insights beyond those provided by the celebrated permutation entropy method which relies on the pattern frequencies only. Therefore, this study presents another case showing the usefulness of applying ordinal pattern transition networks for time series analysis \cite{ZouPR2018}. 
 
-We have suggested two slightly different ways to incorporate the effects of pattern transitions in statistical complexity measures, which are based on (i) a globally normalized transition matrix and (ii) a node-wise normalized transition matrix. Here, the complexity measure based on the node-wise normalized matrix combines both, individual pattern frequencies and the frequencies of transitions among patterns. We have shown that the associated two new statistical complexity measures characterize the complexity properties of deterministic chaos successfully and clearly highlight deterministic-chaotic dynamics in the corresponding complexity--entropy planes (Fig.~\ref{fig:CElogistic}). This finding helps to obtain an improved complexity analysis for time series of both, deterministic chaos and stochastic systems, fostering their better discrimination. However, further more systematic numerical performance tests employing different types of dynamical systems are required to provide compelling evidence for distinctions between different types of dynamics beyond the cases presented in the current work~\cite{BorgesAMC2019,RossoPRE2007}. While this opens several opportunities for follow-up research, we have already demonstrated here the practical usefulness of our improved SCMs by employing this framework to time series of experimental fluid flows and ECG recordings, showing distinctive characteristics for different cases. 
+We have suggested two slightly different ways to incorporate the effects of pattern transitions in statistical complexity measures, which are based on (i) a globally normalized transition matrix and (ii) a node-wise normalized transition matrix. Here, the complexity measure based on the node-wise normalized matrix combines both, individual pattern frequencies and the frequencies of transitions among patterns. We have shown that the associated two new statistical complexity measures characterize the complexity properties of deterministic chaos successfully and clearly highlight deterministic-chaotic dynamics in the corresponding complexity--entropy planes (Fig.~\ref{fig:CElogistic}). This finding helps to obtain an improved complexity analysis for time series of both, deterministic chaos and stochastic systems, fostering their better discrimination. However, further more systematic numerical performance tests employing different types of dynamical systems are required to provide compelling evidence for distinctions between different types of dynamics beyond the cases presented in the current work~\cite{BorgesAMC2019,RossoPRE2007}. While this opens several opportunities for follow-up research, we have already demonstrated here the practical usefulness of our improved SCMs by employing this framework to time series of experimental fluid flows and ECG recordings, showing {\color{red} statistically significant discrimination} for different cases. 
 
-Some open problems also common to other nonlinear time series analysis methods remain to be further addressed, for example, the dependence of reliable estimates of SCMs on the available time series length. For time-discrete dynamical systems like chaotic maps, one may easily use longer data series, which however does not seem to improve the estimates very much due to the accumulation of effects due to a limited numerical precision (Fig.~\ref{fig:transient}). For continuous systems, together with the embedding parameters, the sampling frequency is another important characteristic which needs to be further explored. Moreover, the generalization of our approach from univariate to bivariate time series analysis shall be further discussed. We noticed that this aspect has remained a largely untouched subject for statistical complexity analysis so far, while it presents an interesting task to show the dependence of complexity on interaction. We outline further work on the aforementioned topics as subjects of future research.
+Some open problems also common to other nonlinear time series analysis methods remain to be further addressed, for example, the dependence of reliable estimates of SCMs on the available time series length. {\color{red}For reliable estimations of traditional entropy $\mathcal{H}_O$ and SCM $\mathcal{C}_O$, the length $N > 5 D!$ has been largely suggested \cite{BandtPRL2002,AmigoPTRSA2014}. However, even longer length is required for the newly proposed SCMs based on transition frequencies because the transition matrix has the dimension $D!\times (D! - 1)$ if self loops are excluded. This should not be a big problem when working with time series from numerical models provided with the rapid increased computing power nowadays. } For time-discrete dynamical systems like chaotic maps, one may easily use longer data series, which however does not seem to improve the estimates very much due to the accumulation of effects due to a limited numerical precision (Fig.~\ref{fig:transient}). {\color{red} The dependence of the new SCMs on the length $N$ becomes crucial for experimental time series studies.} For continuous systems, together with the embedding parameters, the sampling frequency is another important characteristic which needs to be further explored. Moreover, the generalization of our approach from univariate to bivariate time series analysis shall be further discussed. We noticed that this aspect has remained a largely untouched subject for statistical complexity analysis so far, while it presents an interesting task to show the dependence of complexity on interaction. {\color{red} We may integrate some of the traditional network topological statistical measures of higher order into the SCMs, for instance, clustering coefficients or path lengths, which have been widely discussed to characterize the dynamical properties of the system generating the time series at hand \cite{ZouPR2018}.} We outline further work on the aforementioned topics as subjects of future research. 
 
 \section*{Acknowledgements}
-Parts of this work have been financially supported by the National Natural Science Foundation of China (grant no. 11872182 and 11835003). YZ further acknowledges support by the Shanghai Municipal Science and Technology Major Project (grant no. 2018SHZDZX01) and ZJ Lab. The authors thank J. B. Borges and O. A. Rosso for sharing algorithms for computing $\mathcal{C}_{min}$ and $\mathcal{C}_{max}$. 
+Parts of this work have been financially supported by the National Natural Science Foundation of China (grant no. 11872182,11835003, and 11875132), the Natural Science Foundation of Shanghai (grant no. 18ZR1411800). YZ further acknowledges support by the Shanghai Municipal Science and Technology Major Project (grant no. 2018SHZDZX01) and ZJ Lab. The authors thank J. B. Borges and O. A. Rosso for sharing algorithms for computing $\mathcal{C}_{min}$ and $\mathcal{C}_{max}$. 
 
-% \bibliography{ref_Zou,ref_Donner}
+\section*{Data Availability Statement}
+The fluid data that support the findings of this study are available from the corresponding author upon reasonable request. The ECG data that support the findings of this study are openly available in {\tt https://www.physionet.org} from MIT-BIH Database and the Creighton University Cardiac Center \cite{GoldbergerMITBIH2000}. 
 
-%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
-%Control: key (0)
-%Control: author (8) initials jnrlst
-%Control: editor formatted (1) identically to author
-%Control: production of article title (0) allowed
-%Control: page (1) range
-%Control: year (1) truncated
-%Control: production of eprint (0) enabled
-\begin{thebibliography}{39}%
-\makeatletter
-\providecommand \@ifxundefined [1]{%
- \@ifx{#1\undefined}
-}%
-\providecommand \@ifnum [1]{%
- \ifnum #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \@ifx [1]{%
- \ifx #1\expandafter \@firstoftwo
- \else \expandafter \@secondoftwo
- \fi
-}%
-\providecommand \natexlab [1]{#1}%
-\providecommand \enquote  [1]{``#1''}%
-\providecommand \bibnamefont  [1]{#1}%
-\providecommand \bibfnamefont [1]{#1}%
-\providecommand \citenamefont [1]{#1}%
-\providecommand \href@noop [0]{\@secondoftwo}%
-\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
-\providecommand \@href[1]{\@@startlink{#1}\@@href}%
-\providecommand \@@href[1]{\endgroup#1\@@endlink}%
-\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
-  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
-\providecommand \@@startlink[1]{}%
-\providecommand \@@endlink[0]{}%
-\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
-\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
-\providecommand \urlprefix  [0]{URL }%
-\providecommand \Eprint [0]{\href }%
-\providecommand \doibase [0]{http://dx.doi.org/}%
-\providecommand \selectlanguage [0]{\@gobble}%
-\providecommand \bibinfo  [0]{\@secondoftwo}%
-\providecommand \bibfield  [0]{\@secondoftwo}%
-\providecommand \translation [1]{[#1]}%
-\providecommand \BibitemOpen [0]{}%
-\providecommand \bibitemStop [0]{}%
-\providecommand \bibitemNoStop [0]{.\EOS\space}%
-\providecommand \EOS [0]{\spacefactor3000\relax}%
-\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
-\let\auto@bib@innerbib\@empty
-%</preamble>
-\bibitem [{\citenamefont {Zou}\ \emph {et~al.}(2019)\citenamefont {Zou},
-  \citenamefont {Donner}, \citenamefont {Marwan}, \citenamefont {Donges},\ and\
-  \citenamefont {Kurths}}]{ZouPR2018}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Zou}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Donner}},
-  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Marwan}}, \bibinfo
-  {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Donges}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Complex network approaches to nonlinear time
-  series analysis},}\ }\href {\doibase 10.1016/j.physrep.2018.10.005}
-  {\bibfield  {journal} {\bibinfo  {journal} {Physics Reports}\ }\textbf
-  {\bibinfo {volume} {787}},\ \bibinfo {pages} {1--97} (\bibinfo {year}
-  {2019})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kantz}\ and\ \citenamefont
-  {Schreiber}(2004)}]{Kantz97}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Kantz}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Schreiber}},\ }\href@noop {} {\emph {\bibinfo {title} {Nonlinear Time Series
-  Analysis}}},\ \bibinfo {edition} {2nd}\ ed.\ (\bibinfo  {publisher}
-  {Cambridge University Press, Cambridge},\ \bibinfo {year} {2004})\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Sprott}(2003)}]{Sprott2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
-  {Sprott}},\ }\href@noop {} {\emph {\bibinfo {title} {Chaos and Time-Series
-  Analysis}}}\ (\bibinfo  {publisher} {Oxford University Press, Oxford},\
-  \bibinfo {year} {2003})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zhang}\ and\ \citenamefont
-  {Small}(2006)}]{ZhangPRL2006}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
-  {Zhang}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Small}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {{Complex network from
-  pseudoperiodic time series: Topology versus dynamics}},}\ }\href {\doibase
-  10.1103/PhysRevLett.96.238701} {\bibfield  {journal} {\bibinfo  {journal}
-  {{Phys. Rev. Lett.}}\ }\textbf {\bibinfo {volume} {{96}}},\ \bibinfo {pages}
-  {238701} (\bibinfo {year} {{2006}})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Marwan}\ \emph {et~al.}(2009)\citenamefont {Marwan},
-  \citenamefont {Donges}, \citenamefont {Zou}, \citenamefont {Donner},\ and\
-  \citenamefont {Kurths}}]{MarwanPLA2009}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Marwan}}, \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Donges}},
-  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Zou}}, \bibinfo {author}
-  {\bibfnamefont {R.~V.}\ \bibnamefont {Donner}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Complex network approach for recurrence analysis of time
-  series},}\ }\href {\doibase https://doi.org/10.1016/j.physleta.2009.09.042}
-  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf
-  {\bibinfo {volume} {373}},\ \bibinfo {pages} {4246 -- 4254} (\bibinfo {year}
-  {2009})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Donner}\ \emph {et~al.}(2010)\citenamefont {Donner},
-  \citenamefont {Zou}, \citenamefont {Donges}, \citenamefont {Marwan},\ and\
-  \citenamefont {Kurths}}]{Donner2010a}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont
-  {Donner}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Zou}},
-  \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Donges}}, \bibinfo
-  {author} {\bibfnamefont {N.}~\bibnamefont {Marwan}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {{Recurrence networks --- a novel paradigm for nonlinear
-  time series analysis}},}\ }\href {\doibase 10.1088/1367-2630/12/3/033025}
-  {\bibfield  {journal} {\bibinfo  {journal} {New J. Phys.}\ }\textbf {\bibinfo
-  {volume} {12}},\ \bibinfo {pages} {033025} (\bibinfo {year}
-  {2010})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Lacasa}\ \emph {et~al.}(2008)\citenamefont {Lacasa},
-  \citenamefont {Luque}, \citenamefont {Ballesteros}, \citenamefont {Luque},\
-  and\ \citenamefont {Nuno}}]{Lacasa2008}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
-  {Lacasa}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Luque}},
-  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Ballesteros}}, \bibinfo
-  {author} {\bibfnamefont {J.}~\bibnamefont {Luque}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.~C.}\ \bibnamefont {Nuno}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {{From time series to complex networks: The visibility
-  graph}},}\ }\href {\doibase 10.1073/pnas.0709247105} {\bibfield  {journal}
-  {\bibinfo  {journal} {Proc. Natl. Acad. Sci.}\ }\textbf {\bibinfo {volume}
-  {105}},\ \bibinfo {pages} {4972--4975} (\bibinfo {year} {2008})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Nu{\~{n}}ez}\ \emph {et~al.}(2012)\citenamefont
-  {Nu{\~{n}}ez}, \citenamefont {Lacasa}, \citenamefont {Patricio},\ and\
-  \citenamefont {Luque}}]{Nunez2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Nu{\~{n}}ez}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Lacasa}},
-  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Patricio}}, \ and\
-  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Luque}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {{Visibility Algorithms: A Short
-  Review}},}\ }in\ \href {\doibase 10.5772/34810} {\emph {\bibinfo {booktitle}
-  {New Front. Graph Theory}}}\ (\bibinfo  {publisher} {InTech},\ \bibinfo
-  {year} {2012})\ Chap.~\bibinfo {chapter} {6}, pp.\ \bibinfo {pages}
-  {119--152}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Nicolis}, \citenamefont {Cantu},\ and\ \citenamefont
-  {Nicolis}(2005)}]{Nicolis2005}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
-  {Nicolis}}, \bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont {Cantu}},
-  \ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Nicolis}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {{Dynamical aspects of
-  interaction networks}},}\ }\href {\doibase 10.1142/S0218127405014167}
-  {\bibfield  {journal} {\bibinfo  {journal} {Int. J. Bifurc. Chaos}\ }\textbf
-  {\bibinfo {volume} {15}},\ \bibinfo {pages} {3467--3480} (\bibinfo {year}
-  {2005})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {McCullough}\ \emph {et~al.}(2015)\citenamefont
-  {McCullough}, \citenamefont {Small}, \citenamefont {Stemler},\ and\
-  \citenamefont {Iu}}]{MichaelChaos2015}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {McCullough}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Small}},
-  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Stemler}}, \ and\
-  \bibinfo {author} {\bibfnamefont {H.~H.-C.}\ \bibnamefont {Iu}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Time lagged ordinal partition networks
-  for capturing dynamics of continuous dynamical systems},}\ }\href {\doibase
-  10.1063/1.4919075} {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\
-  }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages} {053101} (\bibinfo
-  {year} {2015})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kulp}\ \emph {et~al.}(2016)\citenamefont {Kulp},
-  \citenamefont {Chobot}, \citenamefont {Freitas},\ and\ \citenamefont
-  {Sprechini}}]{KulpChaos2016}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
-  {Kulp}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Chobot}},
-  \bibinfo {author} {\bibfnamefont {H.~R.}\ \bibnamefont {Freitas}}, \ and\
-  \bibinfo {author} {\bibfnamefont {G.~D.}\ \bibnamefont {Sprechini}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Using ordinal partition
-  transition networks to analyze {ECG} data},}\ }\href {\doibase
-  10.1063/1.4959537} {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\
-  }\textbf {\bibinfo {volume} {26}},\ \bibinfo {pages} {073114} (\bibinfo
-  {year} {2016})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zhang}\ \emph {et~al.}(2017)\citenamefont {Zhang},
-  \citenamefont {Zhou}, \citenamefont {Tang}, \citenamefont {Guo},
-  \citenamefont {Small},\ and\ \citenamefont {Zou}}]{zhangSciRep2017}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~Y.}\ \bibnamefont
-  {Zhang}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Zhou}},
-  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Tang}}, \bibinfo {author}
-  {\bibfnamefont {H.}~\bibnamefont {Guo}}, \bibinfo {author} {\bibfnamefont
-  {M.}~\bibnamefont {Small}}, \ and\ \bibinfo {author} {\bibfnamefont
-  {Y.}~\bibnamefont {Zou}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
-  {Constructing ordinal partition transition networks from multivariate time
-  series},}\ }\href {\doibase 10.1038/s41598-017-08245-x} {\bibfield  {journal}
-  {\bibinfo  {journal} {Scientific Reports}\ }\textbf {\bibinfo {volume} {7}},\
-  \bibinfo {pages} {7795} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {McCullough}\ \emph {et~al.}(2017)\citenamefont
-  {McCullough}, \citenamefont {Small}, \citenamefont {Iu},\ and\ \citenamefont
-  {Stemler}}]{McCullough2017b}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {McCullough}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Small}},
-  \bibinfo {author} {\bibfnamefont {H.~H.~C.}\ \bibnamefont {Iu}}, \ and\
-  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Stemler}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {{Multiscale ordinal network analysis of
-  human cardiac dynamics}},}\ }\href {\doibase 10.1098/rsta.2016.0292}
-  {\bibfield  {journal} {\bibinfo  {journal} {Philos. Trans. R. Soc. A Math.
-  Phys. Eng. Sci.}\ }\textbf {\bibinfo {volume} {375}},\ \bibinfo {pages}
-  {20160292} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Borges}\ \emph {et~al.}(2019)\citenamefont {Borges},
-  \citenamefont {Ramos}, \citenamefont {Mini}, \citenamefont {Rosso},
-  \citenamefont {Frery},\ and\ \citenamefont {Loureiro}}]{BorgesAMC2019}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~B.}\ \bibnamefont
-  {Borges}}, \bibinfo {author} {\bibfnamefont {H.~S.}\ \bibnamefont {Ramos}},
-  \bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Mini}}, \bibinfo
-  {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}}, \bibinfo {author}
-  {\bibfnamefont {A.~C.}\ \bibnamefont {Frery}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {A.~A.~F.}\ \bibnamefont {Loureiro}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Learning and distinguishing time series dynamics
-  via ordinal patterns transition graphs},}\ }\href {\doibase
-  https://doi.org/10.1016/j.amc.2019.06.068} {\bibfield  {journal} {\bibinfo
-  {journal} {Applied Mathematics and Computation}\ }\textbf {\bibinfo {volume}
-  {362}},\ \bibinfo {pages} {124554} (\bibinfo {year} {2019})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Subramaniyam}\ \emph {et~al.}(view)\citenamefont
-  {Subramaniyam}, \citenamefont {Donner}, \citenamefont {Caron}, \citenamefont
-  {Panuccio},\ and\ \citenamefont {Hyttinen}}]{Subramaniyam2020}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~P.}\ \bibnamefont
-  {Subramaniyam}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont
-  {Donner}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Caron}},
-  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Panuccio}}, \ and\
-  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Hyttinen}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Causal coupling inference from
-  multivariate time series based on ordinal partition transition networks},}\
-  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nonlinear
-  Dynamics}\ } (\bibinfo {year} {in review})},\ \bibinfo {note} {arXiv preprint
-  2010.00948}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {{Bandt}}\ and\ \citenamefont
-  {{Pompe}}(2002)}]{BandtPRL2002}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {{Bandt}}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
-  {{Pompe}}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Permutation
-  entropy: A natural complexity measure for time series},}\ }\href {\doibase
-  10.1103/PhysRevLett.88.174102} {\bibfield  {journal} {\bibinfo  {journal}
-  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages}
-  {174102} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Amig{\'o}}, \citenamefont {Keller},\ and\
-  \citenamefont {Unakafova}(2014)}]{AmigoPTRSA2014}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Amig{\'o}}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Keller}}, \
-  and\ \bibinfo {author} {\bibfnamefont {V.~A.}\ \bibnamefont {Unakafova}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Ordinal symbolic analysis
-  and its application to biomedical recordings},}\ }\href {\doibase
-  10.1098/rsta.2014.0091} {\bibfield  {journal} {\bibinfo  {journal} {Phil.
-  Trans. R. Soc. A}\ }\textbf {\bibinfo {volume} {373}},\ \bibinfo {pages}
-  {20140091} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zanin}(2008)}]{ZaninChaos2008}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Zanin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Forbidden
-  patterns in financial time series},}\ }\href {\doibase 10.1063/1.2841197}
-  {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\ }\textbf {\bibinfo
-  {volume} {18}},\ \bibinfo {pages} {013119} (\bibinfo {year}
-  {2008})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Barreiro}, \citenamefont {Marti},\ and\ \citenamefont
-  {Masoller}(2011)}]{BarreiroChaos2011}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Barreiro}}, \bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont {Marti}},
-  \ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Masoller}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Inferring long memory
-  processes in the climate network via ordinal pattern analysis},}\ }\href
-  {\doibase 10.1063/1.3545273} {\bibfield  {journal} {\bibinfo  {journal}
-  {Chaos}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo {pages} {013101}
-  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Takens}(1981)}]{Takens1981}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
-  {Takens}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Detecting
-  strange attractors in turbulence}},}\ }in\ \href {\doibase
-  10.1007/BFb0091924} {\emph {\bibinfo {booktitle} {Dynamical Systems and
-  Turbulence, Warwick 1980}}},\ \bibinfo {series} {Lecture Notes in
-  Mathematics}, Vol.\ \bibinfo {volume} {898},\ \bibinfo {editor} {edited by\
-  \bibinfo {editor} {\bibfnamefont {D.}~\bibnamefont {Rand}}\ and\ \bibinfo
-  {editor} {\bibfnamefont {L.-S.}\ \bibnamefont {Young}}}\ (\bibinfo
-  {publisher} {Springer, New York},\ \bibinfo {year} {1981})\ pp.\ \bibinfo
-  {pages} {366--381}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Amig\'o}, \citenamefont {Zambrano},\ and\
-  \citenamefont {Sanju\'an}(2007)}]{AmigoEPL2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Amig\'o}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zambrano}}, \
-  and\ \bibinfo {author} {\bibfnamefont {M.~A.~F.}\ \bibnamefont {Sanju\'an}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {True and false forbidden
-  patterns in deterministic and random dynamics},}\ }\href {\doibase
-  https://doi.org/10.1209/0295-5075/79/50001} {\bibfield  {journal} {\bibinfo
-  {journal} {Europhys. Lett.}\ }\textbf {\bibinfo {volume} {79}},\ \bibinfo
-  {pages} {50001} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Amig\'o}, \citenamefont {Zambrano},\ and\
-  \citenamefont {Sanju\'an}(2008)}]{AmigoEPL2008}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Amig\'o}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zambrano}}, \
-  and\ \bibinfo {author} {\bibfnamefont {M.~A.~F.}\ \bibnamefont {Sanju\'an}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Combinatorial detection of
-  determinism in noisy time series},}\ }\href {\doibase
-  https://doi.org/10.1209/0295-5075/83/60005} {\bibfield  {journal} {\bibinfo
-  {journal} {Europhys. Lett.}\ }\textbf {\bibinfo {volume} {83}},\ \bibinfo
-  {pages} {60005} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Rosso}\ \emph {et~al.}(2012)\citenamefont {Rosso},
-  \citenamefont {Carpi}, \citenamefont {Saco}, \citenamefont {Ravetti},
-  \citenamefont {Larrondo},\ and\ \citenamefont {Plastino}}]{RossoEPJB2012}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
-  {Rosso}}, \bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont {Carpi}},
-  \bibinfo {author} {\bibfnamefont {P.~M.}\ \bibnamefont {Saco}}, \bibinfo
-  {author} {\bibfnamefont {M.~G.}\ \bibnamefont {Ravetti}}, \bibinfo {author}
-  {\bibfnamefont {H.~A.}\ \bibnamefont {Larrondo}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {Plastino}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {The {A}mig{\'o} paradigm of forbidden/missing patterns: a
-  detailed analysis},}\ }\href {\doibase 10.1140/epjb/e2012-30307-8} {\bibfield
-   {journal} {\bibinfo  {journal} {Eur. Phys. J. B}\ }\textbf {\bibinfo
-  {volume} {85}},\ \bibinfo {pages} {419} (\bibinfo {year} {2012})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Kowalski}\ \emph {et~al.}(2011)\citenamefont
-  {Kowalski}, \citenamefont {Martin}, \citenamefont {Plastino}, \citenamefont
-  {Rosso},\ and\ \citenamefont {Casas}}]{kowalskiEntropy2011}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
-  {Kowalski}}, \bibinfo {author} {\bibfnamefont {M.~T.}\ \bibnamefont
-  {Martin}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}},
-  \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}}, \ and\
-  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Casas}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Distances in probability space and the
-  statistical complexity setup},}\ }\href {\doibase 10.3390/e13061055}
-  {\bibfield  {journal} {\bibinfo  {journal} {Entropy}\ }\textbf {\bibinfo
-  {volume} {13}},\ \bibinfo {pages} {1055--1075} (\bibinfo {year}
-  {2011})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {L\'opez-Ruiz}, \citenamefont {Mancini},\ and\
-  \citenamefont {Calbet}(1995)}]{LopezPLA1995}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {L\'opez-Ruiz}}, \bibinfo {author} {\bibfnamefont {H.~L.}\ \bibnamefont
-  {Mancini}}, \ and\ \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
-  {Calbet}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A statistical
-  measure of complexity},}\ }\href {\doibase
-  https://doi.org/10.1016/0375-9601(95)00867-5} {\bibfield  {journal} {\bibinfo
-   {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {209}},\ \bibinfo
-  {pages} {321 -- 326} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Rosso}\ \emph
-  {et~al.}(2007{\natexlab{a}})\citenamefont {Rosso}, \citenamefont {Larrondo},
-  \citenamefont {Martin}, \citenamefont {Plastino},\ and\ \citenamefont
-  {Fuentes}}]{rossoPRL2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
-  {Rosso}}, \bibinfo {author} {\bibfnamefont {H.~A.}\ \bibnamefont {Larrondo}},
-  \bibinfo {author} {\bibfnamefont {M.~T.}\ \bibnamefont {Martin}}, \bibinfo
-  {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \ and\ \bibinfo
-  {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Fuentes}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Distinguishing noise from chaos},}\
-  }\href {\doibase 10.1103/PhysRevLett.99.154102} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {99}},\
-  \bibinfo {pages} {154102} (\bibinfo {year} {2007}{\natexlab{a}})}\BibitemShut
-  {NoStop}%
-\bibitem [{\citenamefont {Lange}, \citenamefont {Rosso},\ and\ \citenamefont
-  {Hauhs}(2013)}]{Lange2013}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Lange}}, \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}}, \
-  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Hauhs}},\ }\bibfield
-   {title} {\enquote {\bibinfo {title} {Ordinal pattern and statistical
-  complexity analysis of daily stream flow time series},}\ }\href {\doibase
-  10.1140/epjst/e2013-01858-3} {\bibfield  {journal} {\bibinfo  {journal} {Eur.
-  Phys. J. S.T.}\ }\textbf {\bibinfo {volume} {222}},\ \bibinfo {pages}
-  {535--552} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Martin}, \citenamefont {Plastino},\ and\
-  \citenamefont {Rosso}(2003)}]{MartinPLA2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Martin}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \
-  and\ \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Statistical complexity and
-  disequilibrium},}\ }\href {\doibase
-  https://doi.org/10.1016/S0375-9601(03)00491-2} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {311}},\
-  \bibinfo {pages} {126 -- 132} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {da~F.~Costa}\ \emph {et~al.}(2007)\citenamefont
-  {da~F.~Costa}, \citenamefont {Rodrigues}, \citenamefont {Travieso},\ and\
-  \citenamefont {Boas}}]{CostaADPhy2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
-  {da~F.~Costa}}, \bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont
-  {Rodrigues}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Travieso}},
-  \ and\ \bibinfo {author} {\bibfnamefont {P.~R.~V.}\ \bibnamefont {Boas}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Characterization of complex
-  networks: A survey of measurements},}\ }\href {\doibase
-  10.1080/00018730601170527} {\bibfield  {journal} {\bibinfo  {journal}
-  {Advances in Physics}\ }\textbf {\bibinfo {volume} {56}},\ \bibinfo {pages}
-  {167--242} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Riedl}, \citenamefont {M\"uller},\ and\ \citenamefont
-  {Wessel}(2013)}]{Riedl2013}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Riedl}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {M\"uller}}, \
-  and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Wessel}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Practical considerations of
-  permutation entropy},}\ }\href {\doibase 10.1140/epjst/e2013-01862-7}
-  {\bibfield  {journal} {\bibinfo  {journal} {Eur. Phys. J. Spec. Top.}\
-  }\textbf {\bibinfo {volume} {222}},\ \bibinfo {pages} {249 -- 262} (\bibinfo
-  {year} {2013})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Rosso}\ \emph
-  {et~al.}(2007{\natexlab{b}})\citenamefont {Rosso}, \citenamefont {Zunino},
-  \citenamefont {P\'erez}, \citenamefont {Figliola}, \citenamefont {Larrondo},
-  \citenamefont {Garavaglia}, \citenamefont {Mart\'{\i}n},\ and\ \citenamefont
-  {Plastino}}]{RossoPRE2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
-  {Rosso}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Zunino}},
-  \bibinfo {author} {\bibfnamefont {D.~G.}\ \bibnamefont {P\'erez}}, \bibinfo
-  {author} {\bibfnamefont {A.}~\bibnamefont {Figliola}}, \bibinfo {author}
-  {\bibfnamefont {H.~A.}\ \bibnamefont {Larrondo}}, \bibinfo {author}
-  {\bibfnamefont {M.}~\bibnamefont {Garavaglia}}, \bibinfo {author}
-  {\bibfnamefont {M.~T.}\ \bibnamefont {Mart\'{\i}n}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {A.}~\bibnamefont {Plastino}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Extracting features of gaussian self-similar stochastic
-  processes via the bandt-pompe approach},}\ }\href {\doibase
-  10.1103/PhysRevE.76.061114} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
-  Rev. E}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {061114}
-  (\bibinfo {year} {2007}{\natexlab{b}})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Kowalski}\ \emph {et~al.}(2007)\citenamefont
-  {Kowalski}, \citenamefont {Martín}, \citenamefont {Plastino},\ and\
-  \citenamefont {Rosso}}]{kowalskiPhyD2007}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Kowalski}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Martín}},
-  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \ and\
-  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Rosso}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Bandt-pompe approach to the
-  classical-quantum transition},}\ }\href {\doibase
-  https://doi.org/10.1016/j.physd.2007.06.015} {\bibfield  {journal} {\bibinfo
-  {journal} {Physica D}\ }\textbf {\bibinfo {volume} {233}},\ \bibinfo {pages}
-  {21 -- 31} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Martin}, \citenamefont {Plastino},\ and\
-  \citenamefont {Rosso}(2006)}]{martinPhyA2006}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Martin}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \
-  and\ \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {Generalized statistical
-  complexity measures: Geometrical and analytical properties},}\ }\href
-  {\doibase https://doi.org/10.1016/j.physa.2005.11.053} {\bibfield  {journal}
-  {\bibinfo  {journal} {Physica A}\ }\textbf {\bibinfo {volume} {369}},\
-  \bibinfo {pages} {439 -- 462} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zou}, \citenamefont {Donner},\ and\ \citenamefont
-  {Kurths}(2015)}]{Zou2015}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Zou}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Donner}}, \
-  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kurths}},\
-  }\bibfield  {title} {\enquote {\bibinfo {title} {{Analyzing long-term
-  correlated stochastic processes by means of recurrence networks: Potentials
-  and pitfalls}},}\ }\href {\doibase 10.1103/PhysRevE.91.022926} {\bibfield
-  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
-  {91}},\ \bibinfo {pages} {022926} (\bibinfo {year} {2015})},\ \Eprint
-  {http://arxiv.org/abs/1409.3613} {1409.3613} \BibitemShut {NoStop}%
-\bibitem [{\citenamefont {R{\"o}ssler}(1976)}]{Roessler1976}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~E.}\ \bibnamefont
-  {R{\"o}ssler}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {An equation
-  for continuous chaos},}\ }\href {\doibase 10.1016/0375-9601(76)90101-8}
-  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf
-  {\bibinfo {volume} {57}},\ \bibinfo {pages} {397--398} (\bibinfo {year}
-  {1976})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Read}\ \emph {et~al.}(1992)\citenamefont {Read},
-  \citenamefont {Bel}, \citenamefont {Johnson},\ and\ \citenamefont
-  {Small}}]{Read_jfm_1992}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont
-  {Read}}, \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont {Bel}},
-  \bibinfo {author} {\bibfnamefont {D.~W.}\ \bibnamefont {Johnson}}, \ and\
-  \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont {Small}},\ }\bibfield
-  {title} {\enquote {\bibinfo {title} {Quasi-periodic and chaotic flow regimes
-  in a thermally driven, rotating fluid a nnulus},}\ }\href@noop {} {\bibfield
-  {journal} {\bibinfo  {journal} {Journal of Fluid Mechanics}\ }\textbf
-  {\bibinfo {volume} {238}},\ \bibinfo {pages} {599--632} (\bibinfo {year}
-  {1992})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Zou}\ \emph {et~al.}(2008)\citenamefont {Zou},
-  \citenamefont {Thiel}, \citenamefont {Romano}, \citenamefont {Read},\ and\
-  \citenamefont {Kurths}}]{ZouEPJST2008}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Zou}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Thiel}}, \bibinfo
-  {author} {\bibfnamefont {M.}~\bibnamefont {Romano}}, \bibinfo {author}
-  {\bibfnamefont {P.}~\bibnamefont {Read}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Recurrence analysis of quasiperiodicity in experimental
-  fluid data},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
-  {Eur. Phys. J. Spec. Top.}\ }\textbf {\bibinfo {volume} {164}},\ \bibinfo
-  {pages} {23--33} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Goldberger}\ \emph {et~al.}(2000)\citenamefont
-  {Goldberger}, \citenamefont {Amaral}, \citenamefont {Glass}, \citenamefont
-  {Hausdorff}, \citenamefont {Ivanov}, \citenamefont {Mark}, \citenamefont
-  {Mietus}, \citenamefont {Moody}, \citenamefont {Peng},\ and\ \citenamefont
-  {Stanley}}]{GoldbergerMITBIH2000}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~L.}\ \bibnamefont
-  {Goldberger}}, \bibinfo {author} {\bibfnamefont {L.~A.~N.}\ \bibnamefont
-  {Amaral}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Glass}},
-  \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Hausdorff}}, \bibinfo
-  {author} {\bibfnamefont {P.~C.}\ \bibnamefont {Ivanov}}, \bibinfo {author}
-  {\bibfnamefont {R.~G.}\ \bibnamefont {Mark}}, \bibinfo {author}
-  {\bibfnamefont {J.~E.}\ \bibnamefont {Mietus}}, \bibinfo {author}
-  {\bibfnamefont {G.~B.}\ \bibnamefont {Moody}}, \bibinfo {author}
-  {\bibfnamefont {C.-K.}\ \bibnamefont {Peng}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {H.~E.}\ \bibnamefont {Stanley}},\ }\bibfield  {title}
-  {\enquote {\bibinfo {title} {Physiobank, physiotoolkit, and physionet},}\
-  }\href {\doibase 10.1161/01.CIR.101.23.e215} {\bibfield  {journal} {\bibinfo
-  {journal} {Circulation}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo
-  {pages} {e215--e220} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Small}\ \emph {et~al.}(2002)\citenamefont {Small},
-  \citenamefont {Yu}, \citenamefont {Simonotto}, \citenamefont {Harrison},
-  \citenamefont {Grubb},\ and\ \citenamefont {Fox}}]{smallCSF2002}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
-  {Small}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Yu}}, \bibinfo
-  {author} {\bibfnamefont {J.}~\bibnamefont {Simonotto}}, \bibinfo {author}
-  {\bibfnamefont {R.~G.}\ \bibnamefont {Harrison}}, \bibinfo {author}
-  {\bibfnamefont {N.}~\bibnamefont {Grubb}}, \ and\ \bibinfo {author}
-  {\bibfnamefont {K.}~\bibnamefont {Fox}},\ }\bibfield  {title} {\enquote
-  {\bibinfo {title} {Uncovering non-linear structure in human ecg
-  recordings},}\ }\href {\doibase
-  https://doi.org/10.1016/S0960-0779(01)00168-0} {\bibfield  {journal}
-  {\bibinfo  {journal} {Chaos, Solitons \& Fractals}\ }\textbf {\bibinfo
-  {volume} {13}},\ \bibinfo {pages} {1755 -- 1762} (\bibinfo {year}
-  {2002})}\BibitemShut {NoStop}%
-\end{thebibliography}%
+
+\bibliography{ref_Zou,ref_Donner}
 
 \end{document}

@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{39}%
+\begin{thebibliography}{41}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -389,6 +389,16 @@
   https://doi.org/10.1016/S0375-9601(03)00491-2} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {311}},\
   \bibinfo {pages} {126 -- 132} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bates}\ and\ \citenamefont
+  {Shepard}(1993)}]{batesPLA1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
+  {Bates}}\ and\ \bibinfo {author} {\bibfnamefont {H.~K.}\ \bibnamefont
+  {Shepard}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Measuring
+  complexity using information fluctuation},}\ }\href {\doibase
+  https://doi.org/10.1016/0375-9601(93)90232-O} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {172}},\ \bibinfo
+  {pages} {416 -- 425} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {da~F.~Costa}\ \emph {et~al.}(2007)\citenamefont
   {da~F.~Costa}, \citenamefont {Rodrigues}, \citenamefont {Travieso},\ and\
   \citenamefont {Boas}}]{CostaADPhy2007}%
@@ -502,6 +512,19 @@
   fluid data},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
   {Eur. Phys. J. Spec. Top.}\ }\textbf {\bibinfo {volume} {164}},\ \bibinfo
   {pages} {23--33} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thiel}\ \emph {et~al.}(2004)\citenamefont {Thiel},
+  \citenamefont {Romano}, \citenamefont {Read},\ and\ \citenamefont
+  {Kurths}}]{thiel2004a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Thiel}}, \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont {Romano}},
+  \bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont {Read}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {{Estimation of dynamical invariants
+  without embedding by recurrence plots}},}\ }\href {\doibase
+  10.1063/1.1667633} {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\
+  }\textbf {\bibinfo {volume} {14}},\ \bibinfo {pages} {234--243} (\bibinfo
+  {year} {2004})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Goldberger}\ \emph {et~al.}(2000)\citenamefont
   {Goldberger}, \citenamefont {Amaral}, \citenamefont {Glass}, \citenamefont
   {Hausdorff}, \citenamefont {Ivanov}, \citenamefont {Mark}, \citenamefont

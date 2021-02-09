@@ -40,5 +40,5 @@ full_revision : $(SRCS)
 #	$(PDF) $(SRCNAME)			 # Create .pdf from .dvi
 
 clean :
-	-rm  *.log *.aux *.blg *Notes.bib  
+	-rm  *.log *.aux *.blg *Notes.bib  *.bbl
 

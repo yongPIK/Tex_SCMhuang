@@ -11,10 +11,10 @@
 
 #-- Source Files for LaTeX tup -------------------------------
 #... Specify the chapter to compile here or 
-TEXSRC	=	manuscript_Huang.tex
+TEXSRC	=	manuscript_Huang_rev.tex
 
 SRCS	  =	$(TEXSRC)
-TARGET     =	manuscript_Huang.pdf
+TARGET     =	manuscript_Huang_rev.pdf
 SRCNAME	  = 	${TARGET:.pdf=}
 
 #-- Software Environment Setup -------------------------------

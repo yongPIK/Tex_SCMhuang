@@ -250,7 +250,7 @@ In our opinion, the most interesting result is, however, that we do not find any
 \begin{figure*}
         \centering
         \includegraphics[width=2\columnwidth]{CompEntropyCNormalized_Logistic.pdf}
-\caption{\textcolor{red}{(Color online) Normalized complexity -- entropy planes of the three SCMs for the logistic map: (a) $\mathcal{C}_O$, (b) $\mathcal{C}_W$, and (c) $\mathcal{C}_E$. In (c), normalized complexity values larger than 1 indicate numerical artifacts when the control parameter $r$ approaches a bifurcation point, resulting in long transients. The respective embedding dimensions are indicated by different colors (see legend).  \label{fig:CHlogCmax}}}
+\caption{\textcolor{red}{(Color online) Normalized complexity -- entropy planes of the three SCMs for the logistic map: (a) $\mathcal{C}_O^N$, (b) $\mathcal{C}_W^N$, and (c) $\mathcal{C}_E^N$. In (c), normalized complexity values larger than 1 indicate numerical artifacts when the control parameter $r$ approaches a bifurcation point, resulting in long transients. The respective embedding dimensions are indicated by different colors (see legend).  \label{fig:CHlogCmax}}}
 \end{figure*}
 
 {\color{red}The behavior of the different SCMs relative to their respective lower and upper bounds can be further highlighted by considering normalized quantities. Specifically, for a given $\mathcal{H}$ and $D$, we define a normalized complexity 
@@ -269,13 +269,13 @@ Moreover, since fBm series in the persistent regime are nonstationary, we furthe
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{CompEntropy_fBm.pdf}
-\caption{\small{(Color online) Same as in Fig.~\ref{fig:CElogistic}, but for fractional Brownian motion with a Hurst exponent $H \in (0, 1)$ varying with a step size of $\Delta H=0.05$. Note that the normalized entropy is generally decreasing with increasing $H$ (red arrow).}  \label{fig:CEfBm}}
+\caption{\small{(Color online) Same as in Fig.~\ref{fig:CElogistic}, but for fractional Brownian motion with a Hurst exponent $H \in (0, 1)$ varying with a step size of $\Delta H=0.05$. Note that the normalized entropy is generally decreasing with increasing $H$ (red arrow). (a, d) $\mathcal{C}_O$ versus $\mathcal{H}_O$, (b, e) $\mathcal{C}_{W}$ versus $\mathcal{H}_{W}$, and (c, f) $\mathcal{C}_{E}$ versus $\mathcal{H}_{E}$. (a-c) for $D = 4, 5$, and (d-f) for $D = 6$. }  \label{fig:CEfBm}}
 \end{figure*}
 
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{CompEntropy_fGn.pdf}
-\caption{\small{(Color online) Same as in Fig.~\ref{fig:CElogistic}, but for fractional Gaussian noise with a Hurst exponent $H \in (0, 1)$ varying with a step size of $\Delta H=0.05$. Note that only a small region of the complexity--entropy planes is covered in this case. }  \label{fig:CEfGn}}
+\caption{\small{(Color online) Same as in Fig.~\ref{fig:CElogistic}, but for fractional Gaussian noise with a Hurst exponent $H \in (0, 1)$ varying with a step size of $\Delta H=0.05$. Note that only a small region of the complexity--entropy planes is covered in this case. (a, d) $\mathcal{C}_O$ versus $\mathcal{H}_O$, (b, e) $\mathcal{C}_{W}$ versus $\mathcal{H}_{W}$, and (c, f) $\mathcal{C}_{E}$ versus $\mathcal{H}_{E}$. (a-c) for $D = 4, 5$, and (d-f) for $D = 6$. }  \label{fig:CEfGn}}
 \end{figure*}
 
 Comparing the results for both types of stochastic processes with those for the logistic map, a few important observations are made. First of all, the traditional pattern frequency based SCM values as originally reported by Rosso and co-workers \cite{RossoPRE2007,rossoPRL2007} are well reproduced as expected (Figs.~\ref{fig:CEfBm}(a, d) and \ref{fig:CEfGn}(a, d)). Second, \textcolor{red}{unlike for the logistic map} all complexity--entropy pairs of fBm \textcolor{red}{and fGn} clearly differ from the theoretical maximum complexity values, which \textcolor{red}{is a general behavior that} does not change with increasing embedding dimension $D$. {\color{red}From a more qualitative perspective, all three complexity--entropy pairs lead to parabola-shaped curves similar to those of the associated lower and upper bounds. However, it is notable that the transition based SCMs $\mathcal{C}_{W}$ and $\mathcal{C}_{E}$ tend to exhibit higher numerical values than $\mathcal{C}_O$.} 
@@ -289,7 +289,7 @@ Especially for the new OPTN based SCMs, we find a partial overlap between the en
 \begin{figure*}
         \centering
         \includegraphics[width=2\columnwidth]{CompEntropyCNormalized_fBm.pdf}
-\caption{\color{red}(Color online) Same as in Fig.~\ref{fig:CHlogCmax}, but for different realizations of fractional Brownian motion with varying Hurst exponent $H$.  \label{fig:CHfbmCmax}}
+\caption{\color{red}(Color online) Same as in Fig.~\ref{fig:CHlogCmax}, but for different realizations of fractional Brownian motion with varying Hurst exponent $H$. (a) $\mathcal{C}_O^N$, (b) $\mathcal{C}_W^N$, and (c) $\mathcal{C}_E^N$. \label{fig:CHfbmCmax}}
 \end{figure*}
 
 Taken all reported results on the complexity--entropy planes for the logistic map, fBm and fGn together, we conclude that the modified SCMs indeed \textcolor{red}{tend to distinguish} chaotic from stochastic dynamics more precisely than the original approach. We therefore suggest that the pattern transition behavior encoded in the OPTNs provides novel insights that can be exploited in terms of SCMs that complement their traditional counterparts. 
@@ -327,7 +327,7 @@ while varying the control parameter $b$. From a conceptual perspective, construc
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{rosslerEntropy.pdf}
-\caption{\small{Same as Fig. \ref{fig:bifurcation}, but for Poincar\'e sections of the R\"ossler system while varying the control parameter $b$ (see text for details{\color{red}, embedding dimension $D = 6$).} Panel (a) presents a bifurcation diagram based on the $x$ components of all points in the Poincar\'e sections. Panel (b) shows the largest Lyapunov exponent of the system in dependence of $b$.} \label{fig:bifurRossler}}
+\caption{\small{Same as Fig. \ref{fig:bifurcation}, but for Poincar\'e sections of the R\"ossler system while varying the control parameter $b$ (see text for details{\color{red}, embedding dimension $D = 6$).} Panel (a) presents a bifurcation diagram based on the $x$ components of all points in the Poincar\'e sections. Panel (b) shows the largest Lyapunov exponent of the system in dependence of $b$. (c) $\mathcal{H}_O$ and (d) $\mathcal{C}_O$; (e) $\mathcal{H}_W$ and (f) $\mathcal{C}_W$; (g) $\mathcal{H}_E$ and (h) $\mathcal{C}_E$. } \label{fig:bifurRossler}}
 \end{figure*}
 
 
@@ -352,16 +352,16 @@ The second set of example time series comprises physiological signals of human e
 \begin{figure}
 	\centering 
 	\includegraphics[width=\columnwidth]{TS_ECG.pdf}
-\caption{\small{Three representative ECG recording sections (randomly chosen from different rhythmic states): (a) sinus rhythm (SR), (b) VF and VT. The horizontal axis of each panel is the datum number (at 250~Hz \textcolor{red}{sampling rate}) and the vertical axis \textcolor{red}{describes the} ECG surface voltage (in \textcolor{red}{mV}). } \label{tseriesECG}}
+\caption{\small{Three representative ECG recording sections (randomly chosen from different rhythmic states): (a) sinus rhythm (SR), (b) ventricular fibrillation (VF) and (c) ventricular tachycardia (VT). The horizontal axis of each panel is the datum number (at 250~Hz \textcolor{red}{sampling rate}) and the vertical axis \textcolor{red}{describes the} ECG surface voltage (in \textcolor{red}{mV}). } \label{tseriesECG}}
 \end{figure}
 
 For choosing the embedding parameters for both sets of example time series, we follow the suggestions from earlier studies~\cite{ZouEPJST2008,smallCSF2002}. Although we are facing the inevitable presence of nonstationarity and noise in the experimental data, we have verified that the following results do not change {\color{red}qualitatively as} the embedding parameters are varied. In particular, we have \textcolor{red}{again} treated the embedding dimension as a free parameter, which has been varied in the range of $D = 2, 3, \ldots, 6$. \textcolor{red}{In turn,} the embedding delay $\tau$ has been {\color{red}fixed as determined by the first root of the autocorrelation function \cite{Kantz97}. In the case of the temperature time series from the fluid experiments, $\tau_{1} = 110$ time steps (data points) for SW, AV-2 and AV-3, while $\tau_{2} = 60$ for MAV,  which is consistent with the existing literature~\cite{Read_jfm_1992,thiel2004a}.} For the ECG time series, we consistently use an embedding delay of $\tau = 5$ time steps as suggested in \textcolor{red}{Refs.}~\cite{smallCSF2002}. The results have been \textcolor{red}{aggregated} over all subjects. 
 
-In both sets of time series, the OPTN based SCMs enhance our understanding of the underlying nonlinear system, which can be seen from the results summarized in Figs. (\ref{fig:fluid}, \ref{fig:ecg}). For the fluid data (Fig.~\ref{fig:fluid}), $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$ all show consistent changes of the complexity and entropy values between stable wave solution (SW), quasi-periodic 2-frequency amplitude vacillation (AV-2), quasi-periodic 3-frequency amplitude vacillation (AV-3) and chaotic modulated amplitude vacillation (MAV). Specifically, the complexity of these four cases has the following order: SW has the lowest complexity since it shows periodic oscillations with trivial recurrence, while MAV has the highest complexity since it presents chaotically modulated amplitude vacillation. Quasiperiodic states exhibit intermediate complexity values since these two cases have non-trivial recurrences while still featuring a certain degree of regularity. In our case, AV-3 presents a higher complexity than AV-2, which should however be interpreted with care since the AV-2 series originates from an experiment, while the AV-3 series has been taken from a numerical simulation of the same system (hence, there may be a certain level of observational noise present in AV-2 but not in AV-3). The order of complexity values between periodic, quasiperiodic and chaotic solutions still holds for $\mathcal{C}_O$, but the corresponding values become very similar. In particular, it becomes hard for $\mathcal{C}_O$ to identify the difference between AV-2 and AV-3. 
+In both sets of time series, the OPTN based SCMs enhance our understanding of the underlying nonlinear system, which can be seen from the results summarized in Figs. (\ref{fig:fluid}, \ref{fig:ecg}). For the fluid data (Fig.~\ref{fig:fluid}), $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$ all show consistent changes of the complexity and entropy values between stable wave solution (SW), quasi-periodic 2-frequency amplitude vacillation (AV-2), quasi-periodic 3-frequency amplitude vacillation (AV-3) and chaotic modulated amplitude vacillation (MAV). Specifically, the complexity of these four cases has the following order: SW has the lowest complexity since it shows periodic oscillations with trivial recurrence, while MAV has the highest complexity since it presents chaotically modulated amplitude vacillation. Quasiperiodic states exhibit intermediate complexity values since these two cases have non-trivial recurrences while still featuring a certain degree of regularity. In our case, AV-3 presents a higher complexity than AV-2, which should however be interpreted with care since the AV-2 series originates from an experiment, while the AV-3 series has been taken from a numerical simulation of the same system (hence, there may be a certain level of observational noise present in AV-2 but not in AV-3). The order of complexity values between periodic, quasiperiodic and chaotic solutions generally still holds for $\mathcal{C}_O$, but the corresponding values become very similar. In particular, it becomes hard for $\mathcal{C}_O$ to identify the difference between AV-2 and AV-3. 
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{fluidExample.pdf}
-\caption{\color{red}\small{OPTN based entropy and SCM characteristics for experimental fluid data, which are shown for embedding dimensions of $D = 4, 5, 6$. In all subfigures, stable wave (SW, $\blacklozenge$), quasiperiodic 2-frequency amplitude vacillation (AV-2, $\bullet$), quasiperiodic 3-frequency amplitude vacillation (AV-3, $\blacktriangle$) and chaotic modulated amplitude vacillation (MAV, $\blacksquare$) are distinguished. } \label{fig:fluid}}
+\caption{\color{red}\small{OPTN based entropy and SCM characteristics for experimental fluid data, which are shown for different embedding dimensions, (a) $D = 4$, (b) $D = 5$, and (c) $D = 6$. In all subfigures, stable wave (SW, $\blacklozenge$), quasiperiodic 2-frequency amplitude vacillation (AV-2, $\bullet$), quasiperiodic 3-frequency amplitude vacillation (AV-3, $\blacktriangle$) and chaotic modulated amplitude vacillation (MAV, $\blacksquare$) are distinguished. } \label{fig:fluid}}
 \end{figure*}
 
 Qualitatively similar results are obtained for the ECG recordings, as shown in Fig.~\ref{fig:ecg} for three different embedding dimensions. Generally speaking, different ECG recordings exhibit remarkably distinct complexity values since the ensemble medians are well separated between different time series groups of SR, VF and VT as shown by the box plots in Fig. \ref{fig:ecg}. More specifically, SR recordings show very pronounced the highest median of $\mathcal{H}_O$, $\mathcal{H}_W$, $\mathcal{C}_W$, $\mathcal{H}_E$ and $\mathcal{C}_E$, reflecting the existence of significant spectral power in a rather broad frequency band between 50 and 100 beats/min in the signals \cite{smallCSF2002}. On the other hand, the complexity of VT has the smallest value, even lower than for the case of VF. Unlike the other five measures, we note, however, that SR shows the smallest median values of $\mathcal{C}_O$ while VT has the largest values (Fig. \ref{fig:ecg}(b)). 
@@ -370,9 +370,8 @@ Qualitatively similar results are obtained for the ECG recordings, as shown in F
 \begin{figure*}
 	\centering 
 	\includegraphics[width=2\columnwidth]{ecgExample.pdf}
-\caption{\color{red}\small{Box plots for OPTN based entropy and SCM characteristics for human ECG recordings, showing well separated medians for each subject group SR, VF and VT. Entropy and SCM scores are shown for embedding dimensions of $D = 4, 5, 6$. } \label{fig:ecg}}
+\caption{\color{red}\small{Box plots for OPTN based entropy and SCM characteristics for human ECG recordings, showing well separated medians for each subject group SR, VF and VT. Entropy and SCM scores are shown for embedding dimensions of $D = 4, 5, 6$. (a) $\mathcal{H}_O$ and (b) $\mathcal{C}_O$; (c) $\mathcal{H}_W$ and (d) $\mathcal{C}_W$; (e) $\mathcal{H}_E$ and (f) $\mathcal{C}_E$. } \label{fig:ecg}}
 \end{figure*}
-
 
 
 \section{Conclusions} \label{sec:con}
@@ -382,13 +381,605 @@ We have suggested two slightly different ways to incorporate the effects of patt
 
 Some open problems also common to other nonlinear time series analysis methods remain to be further addressed, for example, the dependence of reliable estimates of SCMs on the available time series length. {\color{red}For reliable estimations of traditional entropy $\mathcal{H}_O$ and SCM $\mathcal{C}_O$, a minimum time series length of $L > 5 D!$ has been largely suggested \cite{BandtPRL2002,AmigoPTRSA2014}. However, even much longer lengths are required for the newly proposed SCMs based on transition frequencies, since the transition matrix has the dimensions $D!\cdot (D! - 1)$ if self-loops are excluded. This should however not present a problematic issue when working with time series from numerical models provided with the rapidly increasing computing power nowadays.} For time-discrete dynamical systems like chaotic maps, one may easily \textcolor{red}{generate} longer data series, which however does not \textcolor{red}{necessarily} improve the estimates very much due to the accumulation of effects \textcolor{red}{resulting from} a limited numerical precision (Fig.~\ref{fig:transient}). {\color{red}The dependence of the new SCMs on the time series length $L$ becomes crucial for experimental time series studies. One interesting problem in this context is to understand the extra information of transition probability based complexity measures since strong linear correlations have been found between complexity and entropy at small entropy values, which are expected for a large number of patterns (i.e., $M = D!$) for high embedding dimension $D$ (or, in a similar spirit, $M = D! \cdot (D!-1)$ transitions).} For continuous systems, together with the embedding parameters, the sampling frequency is another important characteristic which needs to be further explored. Moreover, the generalization of our approach from univariate to bivariate time series analysis shall be further discussed. We noticed that this aspect has remained a largely untouched subject for statistical complexity analysis so far, while it presents an interesting task to show the dependence of complexity on interaction. {\color{red}Finally, it appears an interesting aspect to integrate some of the established higher-order network topological characteristics into the definition of additional SCMs, for instance, clustering coefficients or average path lengths, which have been widely discussed to characterize the dynamical properties of the system generating the time series at hand \cite{ZouPR2018}.} We outline further work on the aforementioned topics as subjects of future research. 
 
+\section*{Supplementary Material}
+See Supplementary material: Sec.~SM1 with Figs.~S1 to S3 for the complexity--entropy planes when the self-loops are included in the transition matrix; Sec.~SM2 with Figs.~S4 and S5 for transition curves for the logistic map and the chaotic R\"ossler system when embedding parameters are $D=6$ and $\tau=1$; Sec.~ SM3 with Fig.~S6 for the linear increase of the maximum complexity $\mathcal{C}_{max}$ versus entropy curve for sufficiently large embedding dimension. However, this linear correlation in general is not expected by fractional Brownian motion and fractional Gaussian noise Sec.~ SM3 with Figs.~S7 and S8. 
+
 \section*{Acknowledgements}
-Parts of this work have been financially supported by the National Natural Science Foundation of China (grant no. 11872182, 11835003, 11875132, 61973086), the Natural Science Foundation of Shanghai (grant no. 18ZR1411800). JZ and YZ further acknowledge support by the Shanghai Municipal Science and Technology Major Project (grant no. 2018SHZDZX01) and ZJ Lab. The authors thank J. B. Borges and O. A. Rosso for sharing algorithms for computing $\mathcal{C}_{min}$ and $\mathcal{C}_{max}$\textcolor{red}{, and two anonymous reviewers for helpful comments on the original version of this manuscript}. 
+Parts of this work have been financially supported by the National Natural Science Foundation of China (grant no. 11872182, 11972288, 11835003, 11875132, 61973086), the Natural Science Foundation of Shanghai (grant no. 18ZR1411800). JZ and YZ further acknowledge support by the Shanghai Municipal Science and Technology Major Project and ZJ Lab (grant no. 2018SHZDZX01). The authors thank J. B. Borges and O. A. Rosso for sharing algorithms for computing $\mathcal{C}_{min}$ and $\mathcal{C}_{max}$\textcolor{red}{, and two anonymous reviewers for helpful comments on the original version of this manuscript}. 
 
 \section*{Data Availability Statement}
 The fluid data that support the findings of this study are available from the corresponding author upon reasonable request. The ECG data that support the findings of this study are openly available in {\tt https://www.physionet.org} from MIT-BIH Database and the Creighton University Cardiac Center \cite{GoldbergerMITBIH2000}. 
 
 
-\bibliography{ref_Zou,ref_Donner}
+% \bibliography{ref_Zou,ref_Donner}
+%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (1) range
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{43}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Zou}\ \emph {et~al.}(2019)\citenamefont {Zou},
+  \citenamefont {Donner}, \citenamefont {Marwan}, \citenamefont {Donges},\ and\
+  \citenamefont {Kurths}}]{ZouPR2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Zou}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Donner}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Marwan}}, \bibinfo
+  {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Donges}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title}
+  {\enquote {\bibinfo {title} {Complex network approaches to nonlinear time
+  series analysis},}\ }\href {\doibase 10.1016/j.physrep.2018.10.005}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physics Reports}\ }\textbf
+  {\bibinfo {volume} {787}},\ \bibinfo {pages} {1--97} (\bibinfo {year}
+  {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kantz}\ and\ \citenamefont
+  {Schreiber}(2004)}]{Kantz97}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Kantz}}\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Schreiber}},\ }\href@noop {} {\emph {\bibinfo {title} {Nonlinear Time Series
+  Analysis}}},\ \bibinfo {edition} {2nd}\ ed.\ (\bibinfo  {publisher}
+  {Cambridge University Press, Cambridge},\ \bibinfo {year} {2004})\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Sprott}(2003)}]{Sprott2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Sprott}},\ }\href@noop {} {\emph {\bibinfo {title} {Chaos and Time-Series
+  Analysis}}}\ (\bibinfo  {publisher} {Oxford University Press, Oxford},\
+  \bibinfo {year} {2003})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ and\ \citenamefont
+  {Small}(2006)}]{ZhangPRL2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Zhang}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Small}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {{Complex network from
+  pseudoperiodic time series: Topology versus dynamics}},}\ }\href {\doibase
+  10.1103/PhysRevLett.96.238701} {\bibfield  {journal} {\bibinfo  {journal}
+  {{Phys. Rev. Lett.}}\ }\textbf {\bibinfo {volume} {{96}}},\ \bibinfo {pages}
+  {238701} (\bibinfo {year} {{2006}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Marwan}\ \emph {et~al.}(2009)\citenamefont {Marwan},
+  \citenamefont {Donges}, \citenamefont {Zou}, \citenamefont {Donner},\ and\
+  \citenamefont {Kurths}}]{MarwanPLA2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Marwan}}, \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Donges}},
+  \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Zou}}, \bibinfo {author}
+  {\bibfnamefont {R.~V.}\ \bibnamefont {Donner}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Complex network approach for recurrence analysis of time
+  series},}\ }\href {\doibase https://doi.org/10.1016/j.physleta.2009.09.042}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf
+  {\bibinfo {volume} {373}},\ \bibinfo {pages} {4246 -- 4254} (\bibinfo {year}
+  {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Donner}\ \emph {et~al.}(2010)\citenamefont {Donner},
+  \citenamefont {Zou}, \citenamefont {Donges}, \citenamefont {Marwan},\ and\
+  \citenamefont {Kurths}}]{Donner2010a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont
+  {Donner}}, \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont {Zou}},
+  \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont {Donges}}, \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Marwan}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {{Recurrence networks --- a novel paradigm for nonlinear
+  time series analysis}},}\ }\href {\doibase 10.1088/1367-2630/12/3/033025}
+  {\bibfield  {journal} {\bibinfo  {journal} {New J. Phys.}\ }\textbf {\bibinfo
+  {volume} {12}},\ \bibinfo {pages} {033025} (\bibinfo {year}
+  {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lacasa}\ \emph {et~al.}(2008)\citenamefont {Lacasa},
+  \citenamefont {Luque}, \citenamefont {Ballesteros}, \citenamefont {Luque},\
+  and\ \citenamefont {Nuno}}]{Lacasa2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Lacasa}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Luque}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Ballesteros}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Luque}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~C.}\ \bibnamefont {Nuno}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {{From time series to complex networks: The visibility
+  graph}},}\ }\href {\doibase 10.1073/pnas.0709247105} {\bibfield  {journal}
+  {\bibinfo  {journal} {Proc. Natl. Acad. Sci.}\ }\textbf {\bibinfo {volume}
+  {105}},\ \bibinfo {pages} {4972--4975} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Nu{\~{n}}ez}\ \emph {et~al.}(2012)\citenamefont
+  {Nu{\~{n}}ez}, \citenamefont {Lacasa}, \citenamefont {Patricio},\ and\
+  \citenamefont {Luque}}]{Nunez2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Nu{\~{n}}ez}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Lacasa}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Patricio}}, \ and\
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Luque}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {{Visibility Algorithms: A Short
+  Review}},}\ }in\ \href {\doibase 10.5772/34810} {\emph {\bibinfo {booktitle}
+  {New Front. Graph Theory}}}\ (\bibinfo  {publisher} {InTech},\ \bibinfo
+  {year} {2012})\ Chap.~\bibinfo {chapter} {6}, pp.\ \bibinfo {pages}
+  {119--152}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nicolis}, \citenamefont {Cantu},\ and\ \citenamefont
+  {Nicolis}(2005)}]{Nicolis2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Nicolis}}, \bibinfo {author} {\bibfnamefont {A.~G.}\ \bibnamefont {Cantu}},
+  \ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Nicolis}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {{Dynamical aspects of
+  interaction networks}},}\ }\href {\doibase 10.1142/S0218127405014167}
+  {\bibfield  {journal} {\bibinfo  {journal} {Int. J. Bifurc. Chaos}\ }\textbf
+  {\bibinfo {volume} {15}},\ \bibinfo {pages} {3467--3480} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {McCullough}\ \emph {et~al.}(2015)\citenamefont
+  {McCullough}, \citenamefont {Small}, \citenamefont {Stemler},\ and\
+  \citenamefont {Iu}}]{MichaelChaos2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {McCullough}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Small}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Stemler}}, \ and\
+  \bibinfo {author} {\bibfnamefont {H.~H.-C.}\ \bibnamefont {Iu}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Time lagged ordinal partition networks
+  for capturing dynamics of continuous dynamical systems},}\ }\href {\doibase
+  10.1063/1.4919075} {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\
+  }\textbf {\bibinfo {volume} {25}},\ \bibinfo {pages} {053101} (\bibinfo
+  {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kulp}\ \emph {et~al.}(2016)\citenamefont {Kulp},
+  \citenamefont {Chobot}, \citenamefont {Freitas},\ and\ \citenamefont
+  {Sprechini}}]{KulpChaos2016}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+  {Kulp}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Chobot}},
+  \bibinfo {author} {\bibfnamefont {H.~R.}\ \bibnamefont {Freitas}}, \ and\
+  \bibinfo {author} {\bibfnamefont {G.~D.}\ \bibnamefont {Sprechini}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Using ordinal partition
+  transition networks to analyze {ECG} data},}\ }\href {\doibase
+  10.1063/1.4959537} {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\
+  }\textbf {\bibinfo {volume} {26}},\ \bibinfo {pages} {073114} (\bibinfo
+  {year} {2016})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph {et~al.}(2017)\citenamefont {Zhang},
+  \citenamefont {Zhou}, \citenamefont {Tang}, \citenamefont {Guo},
+  \citenamefont {Small},\ and\ \citenamefont {Zou}}]{zhangSciRep2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~Y.}\ \bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Zhou}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Tang}}, \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Guo}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Small}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {Y.}~\bibnamefont {Zou}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {Constructing ordinal partition transition networks from multivariate time
+  series},}\ }\href {\doibase 10.1038/s41598-017-08245-x} {\bibfield  {journal}
+  {\bibinfo  {journal} {Scientific Reports}\ }\textbf {\bibinfo {volume} {7}},\
+  \bibinfo {pages} {7795} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {McCullough}\ \emph {et~al.}(2017)\citenamefont
+  {McCullough}, \citenamefont {Small}, \citenamefont {Iu},\ and\ \citenamefont
+  {Stemler}}]{McCullough2017b}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {McCullough}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Small}},
+  \bibinfo {author} {\bibfnamefont {H.~H.~C.}\ \bibnamefont {Iu}}, \ and\
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Stemler}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {{Multiscale ordinal network analysis of
+  human cardiac dynamics}},}\ }\href {\doibase 10.1098/rsta.2016.0292}
+  {\bibfield  {journal} {\bibinfo  {journal} {Philos. Trans. R. Soc. A Math.
+  Phys. Eng. Sci.}\ }\textbf {\bibinfo {volume} {375}},\ \bibinfo {pages}
+  {20160292} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Borges}\ \emph {et~al.}(2019)\citenamefont {Borges},
+  \citenamefont {Ramos}, \citenamefont {Mini}, \citenamefont {Rosso},
+  \citenamefont {Frery},\ and\ \citenamefont {Loureiro}}]{BorgesAMC2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~B.}\ \bibnamefont
+  {Borges}}, \bibinfo {author} {\bibfnamefont {H.~S.}\ \bibnamefont {Ramos}},
+  \bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Mini}}, \bibinfo
+  {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}}, \bibinfo {author}
+  {\bibfnamefont {A.~C.}\ \bibnamefont {Frery}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.~A.~F.}\ \bibnamefont {Loureiro}},\ }\bibfield  {title}
+  {\enquote {\bibinfo {title} {Learning and distinguishing time series dynamics
+  via ordinal patterns transition graphs},}\ }\href {\doibase
+  https://doi.org/10.1016/j.amc.2019.06.068} {\bibfield  {journal} {\bibinfo
+  {journal} {Applied Mathematics and Computation}\ }\textbf {\bibinfo {volume}
+  {362}},\ \bibinfo {pages} {124554} (\bibinfo {year} {2019})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Subramaniyam}\ \emph {et~al.}(view)\citenamefont
+  {Subramaniyam}, \citenamefont {Donner}, \citenamefont {Caron}, \citenamefont
+  {Panuccio},\ and\ \citenamefont {Hyttinen}}]{Subramaniyam2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~P.}\ \bibnamefont
+  {Subramaniyam}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont
+  {Donner}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Caron}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Panuccio}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Hyttinen}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Causal coupling inference from
+  multivariate time series based on ordinal partition transition networks},}\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Nonlinear
+  Dynamics}\ } (\bibinfo {year} {in review})},\ \bibinfo {note} {arXiv preprint
+  2010.00948}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Bandt}}\ and\ \citenamefont
+  {{Pompe}}(2002)}]{BandtPRL2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {{Bandt}}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {{Pompe}}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Permutation
+  entropy: A natural complexity measure for time series},}\ }\href {\doibase
+  10.1103/PhysRevLett.88.174102} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo {pages}
+  {174102} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Amig{\'o}}, \citenamefont {Keller},\ and\
+  \citenamefont {Unakafova}(2014)}]{AmigoPTRSA2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Amig{\'o}}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Keller}}, \
+  and\ \bibinfo {author} {\bibfnamefont {V.~A.}\ \bibnamefont {Unakafova}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Ordinal symbolic analysis
+  and its application to biomedical recordings},}\ }\href {\doibase
+  10.1098/rsta.2014.0091} {\bibfield  {journal} {\bibinfo  {journal} {Phil.
+  Trans. R. Soc. A}\ }\textbf {\bibinfo {volume} {373}},\ \bibinfo {pages}
+  {20140091} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zanin}(2008)}]{ZaninChaos2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Zanin}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Forbidden
+  patterns in financial time series},}\ }\href {\doibase 10.1063/1.2841197}
+  {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\ }\textbf {\bibinfo
+  {volume} {18}},\ \bibinfo {pages} {013119} (\bibinfo {year}
+  {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Barreiro}, \citenamefont {Marti},\ and\ \citenamefont
+  {Masoller}(2011)}]{BarreiroChaos2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Barreiro}}, \bibinfo {author} {\bibfnamefont {A.~C.}\ \bibnamefont {Marti}},
+  \ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Masoller}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Inferring long memory
+  processes in the climate network via ordinal pattern analysis},}\ }\href
+  {\doibase 10.1063/1.3545273} {\bibfield  {journal} {\bibinfo  {journal}
+  {Chaos}\ }\textbf {\bibinfo {volume} {21}},\ \bibinfo {pages} {013101}
+  (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Takens}(1981)}]{Takens1981}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Takens}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {{Detecting
+  strange attractors in turbulence}},}\ }in\ \href {\doibase
+  10.1007/BFb0091924} {\emph {\bibinfo {booktitle} {Dynamical Systems and
+  Turbulence, Warwick 1980}}},\ \bibinfo {series} {Lecture Notes in
+  Mathematics}, Vol.\ \bibinfo {volume} {898},\ \bibinfo {editor} {edited by\
+  \bibinfo {editor} {\bibfnamefont {D.}~\bibnamefont {Rand}}\ and\ \bibinfo
+  {editor} {\bibfnamefont {L.-S.}\ \bibnamefont {Young}}}\ (\bibinfo
+  {publisher} {Springer, New York},\ \bibinfo {year} {1981})\ pp.\ \bibinfo
+  {pages} {366--381}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Amig\'o}, \citenamefont {Zambrano},\ and\
+  \citenamefont {Sanju\'an}(2007)}]{AmigoEPL2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Amig\'o}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zambrano}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.~A.~F.}\ \bibnamefont {Sanju\'an}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {True and false forbidden
+  patterns in deterministic and random dynamics},}\ }\href {\doibase
+  https://doi.org/10.1209/0295-5075/79/50001} {\bibfield  {journal} {\bibinfo
+  {journal} {Europhys. Lett.}\ }\textbf {\bibinfo {volume} {79}},\ \bibinfo
+  {pages} {50001} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Amig\'o}, \citenamefont {Zambrano},\ and\
+  \citenamefont {Sanju\'an}(2008)}]{AmigoEPL2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Amig\'o}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Zambrano}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.~A.~F.}\ \bibnamefont {Sanju\'an}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Combinatorial detection of
+  determinism in noisy time series},}\ }\href {\doibase
+  https://doi.org/10.1209/0295-5075/83/60005} {\bibfield  {journal} {\bibinfo
+  {journal} {Europhys. Lett.}\ }\textbf {\bibinfo {volume} {83}},\ \bibinfo
+  {pages} {60005} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rosso}\ \emph {et~al.}(2012)\citenamefont {Rosso},
+  \citenamefont {Carpi}, \citenamefont {Saco}, \citenamefont {Ravetti},
+  \citenamefont {Larrondo},\ and\ \citenamefont {Plastino}}]{RossoEPJB2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
+  {Rosso}}, \bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont {Carpi}},
+  \bibinfo {author} {\bibfnamefont {P.~M.}\ \bibnamefont {Saco}}, \bibinfo
+  {author} {\bibfnamefont {M.~G.}\ \bibnamefont {Ravetti}}, \bibinfo {author}
+  {\bibfnamefont {H.~A.}\ \bibnamefont {Larrondo}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Plastino}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {The {A}mig{\'o} paradigm of forbidden/missing patterns: a
+  detailed analysis},}\ }\href {\doibase 10.1140/epjb/e2012-30307-8} {\bibfield
+   {journal} {\bibinfo  {journal} {Eur. Phys. J. B}\ }\textbf {\bibinfo
+  {volume} {85}},\ \bibinfo {pages} {419} (\bibinfo {year} {2012})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Kowalski}\ \emph {et~al.}(2011)\citenamefont
+  {Kowalski}, \citenamefont {Martin}, \citenamefont {Plastino}, \citenamefont
+  {Rosso},\ and\ \citenamefont {Casas}}]{kowalskiEntropy2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {Kowalski}}, \bibinfo {author} {\bibfnamefont {M.~T.}\ \bibnamefont
+  {Martin}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}},
+  \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}}, \ and\
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Casas}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Distances in probability space and the
+  statistical complexity setup},}\ }\href {\doibase 10.3390/e13061055}
+  {\bibfield  {journal} {\bibinfo  {journal} {Entropy}\ }\textbf {\bibinfo
+  {volume} {13}},\ \bibinfo {pages} {1055--1075} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {L\'opez-Ruiz}, \citenamefont {Mancini},\ and\
+  \citenamefont {Calbet}(1995)}]{LopezPLA1995}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {L\'opez-Ruiz}}, \bibinfo {author} {\bibfnamefont {H.~L.}\ \bibnamefont
+  {Mancini}}, \ and\ \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont
+  {Calbet}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {A statistical
+  measure of complexity},}\ }\href {\doibase
+  https://doi.org/10.1016/0375-9601(95)00867-5} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {209}},\ \bibinfo
+  {pages} {321 -- 326} (\bibinfo {year} {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rosso}\ \emph
+  {et~al.}(2007{\natexlab{a}})\citenamefont {Rosso}, \citenamefont {Larrondo},
+  \citenamefont {Martin}, \citenamefont {Plastino},\ and\ \citenamefont
+  {Fuentes}}]{rossoPRL2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
+  {Rosso}}, \bibinfo {author} {\bibfnamefont {H.~A.}\ \bibnamefont {Larrondo}},
+  \bibinfo {author} {\bibfnamefont {M.~T.}\ \bibnamefont {Martin}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Fuentes}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Distinguishing noise from chaos},}\
+  }\href {\doibase 10.1103/PhysRevLett.99.154102} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {99}},\
+  \bibinfo {pages} {154102} (\bibinfo {year} {2007}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Lange}, \citenamefont {Rosso},\ and\ \citenamefont
+  {Hauhs}(2013)}]{Lange2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Lange}}, \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}}, \
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Hauhs}},\ }\bibfield
+   {title} {\enquote {\bibinfo {title} {Ordinal pattern and statistical
+  complexity analysis of daily stream flow time series},}\ }\href {\doibase
+  10.1140/epjst/e2013-01858-3} {\bibfield  {journal} {\bibinfo  {journal} {Eur.
+  Phys. J. S.T.}\ }\textbf {\bibinfo {volume} {222}},\ \bibinfo {pages}
+  {535--552} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Martin}, \citenamefont {Plastino},\ and\
+  \citenamefont {Rosso}(2003)}]{MartinPLA2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Martin}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \
+  and\ \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Statistical complexity and
+  disequilibrium},}\ }\href {\doibase
+  https://doi.org/10.1016/S0375-9601(03)00491-2} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {311}},\
+  \bibinfo {pages} {126 -- 132} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bates}\ and\ \citenamefont
+  {Shepard}(1993)}]{batesPLA1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
+  {Bates}}\ and\ \bibinfo {author} {\bibfnamefont {H.~K.}\ \bibnamefont
+  {Shepard}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Measuring
+  complexity using information fluctuation},}\ }\href {\doibase
+  https://doi.org/10.1016/0375-9601(93)90232-O} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Lett. A}\ }\textbf {\bibinfo {volume} {172}},\ \bibinfo
+  {pages} {416 -- 425} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {da~F.~Costa}\ \emph {et~al.}(2007)\citenamefont
+  {da~F.~Costa}, \citenamefont {Rodrigues}, \citenamefont {Travieso},\ and\
+  \citenamefont {Boas}}]{CostaADPhy2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {da~F.~Costa}}, \bibinfo {author} {\bibfnamefont {F.~A.}\ \bibnamefont
+  {Rodrigues}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Travieso}},
+  \ and\ \bibinfo {author} {\bibfnamefont {P.~R.~V.}\ \bibnamefont {Boas}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Characterization of complex
+  networks: A survey of measurements},}\ }\href {\doibase
+  10.1080/00018730601170527} {\bibfield  {journal} {\bibinfo  {journal}
+  {Advances in Physics}\ }\textbf {\bibinfo {volume} {56}},\ \bibinfo {pages}
+  {167--242} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pessa}\ and\ \citenamefont
+  {Ribeiro}(2019)}]{PessaPRE2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~A.~B.}\
+  \bibnamefont {Pessa}}\ and\ \bibinfo {author} {\bibfnamefont {H.~V.}\
+  \bibnamefont {Ribeiro}},\ }\bibfield  {title} {\enquote {\bibinfo {title}
+  {Characterizing stochastic time series with ordinal networks},}\ }\href
+  {\doibase 10.1103/PhysRevE.100.042304} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo
+  {pages} {042304} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kowalski}\ \emph {et~al.}(2007)\citenamefont
+  {Kowalski}, \citenamefont {Martín}, \citenamefont {Plastino},\ and\
+  \citenamefont {Rosso}}]{kowalskiPhyD2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kowalski}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Martín}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \ and\
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Rosso}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Bandt-pompe approach to the
+  classical-quantum transition},}\ }\href {\doibase
+  https://doi.org/10.1016/j.physd.2007.06.015} {\bibfield  {journal} {\bibinfo
+  {journal} {Physica D}\ }\textbf {\bibinfo {volume} {233}},\ \bibinfo {pages}
+  {21 -- 31} (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Riedl}, \citenamefont {M\"uller},\ and\ \citenamefont
+  {Wessel}(2013)}]{Riedl2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Riedl}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {M\"uller}}, \
+  and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Wessel}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Practical considerations of
+  permutation entropy},}\ }\href {\doibase 10.1140/epjst/e2013-01862-7}
+  {\bibfield  {journal} {\bibinfo  {journal} {Eur. Phys. J. Spec. Top.}\
+  }\textbf {\bibinfo {volume} {222}},\ \bibinfo {pages} {249 -- 262} (\bibinfo
+  {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rosso}\ \emph
+  {et~al.}(2007{\natexlab{b}})\citenamefont {Rosso}, \citenamefont {Zunino},
+  \citenamefont {P\'erez}, \citenamefont {Figliola}, \citenamefont {Larrondo},
+  \citenamefont {Garavaglia}, \citenamefont {Mart\'{\i}n},\ and\ \citenamefont
+  {Plastino}}]{RossoPRE2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont
+  {Rosso}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Zunino}},
+  \bibinfo {author} {\bibfnamefont {D.~G.}\ \bibnamefont {P\'erez}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Figliola}}, \bibinfo {author}
+  {\bibfnamefont {H.~A.}\ \bibnamefont {Larrondo}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Garavaglia}}, \bibinfo {author}
+  {\bibfnamefont {M.~T.}\ \bibnamefont {Mart\'{\i}n}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Plastino}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Extracting features of gaussian self-similar stochastic
+  processes via the bandt-pompe approach},}\ }\href {\doibase
+  10.1103/PhysRevE.76.061114} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. E}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages} {061114}
+  (\bibinfo {year} {2007}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Martin}, \citenamefont {Plastino},\ and\
+  \citenamefont {Rosso}(2006)}]{martinPhyA2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Martin}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Plastino}}, \
+  and\ \bibinfo {author} {\bibfnamefont {O.~A.}\ \bibnamefont {Rosso}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {Generalized statistical
+  complexity measures: Geometrical and analytical properties},}\ }\href
+  {\doibase https://doi.org/10.1016/j.physa.2005.11.053} {\bibfield  {journal}
+  {\bibinfo  {journal} {Physica A}\ }\textbf {\bibinfo {volume} {369}},\
+  \bibinfo {pages} {439 -- 462} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {L.-Ruiz}, \citenamefont {Mancini},\ and\
+  \citenamefont {Calbet}(2010)}]{SMCbook2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {L.-Ruiz}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Mancini}}, \
+  and\ \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Calbet}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {A statistical measure of
+  complexity},}\ }in\ \href {\doibase 10.2174/9781608057603113010012} {\emph
+  {\bibinfo {booktitle} {Concepts and Recent Advances in Generalized
+  Information Measures and Statistics}}},\ \bibinfo {editor} {edited by\
+  \bibinfo {editor} {\bibfnamefont {A.~M.}\ \bibnamefont {Kowalski}}, \bibinfo
+  {editor} {\bibfnamefont {R.~D.}\ \bibnamefont {Rossignoli}}, \ and\ \bibinfo
+  {editor} {\bibfnamefont {E.~M.~F.}\ \bibnamefont {Curado}}}\ (\bibinfo
+  {publisher} {Bentham Science Publishers},\ \bibinfo {year} {2010})\ pp.\
+  \bibinfo {pages} {147--168}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zou}, \citenamefont {Donner},\ and\ \citenamefont
+  {Kurths}(2015)}]{Zou2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Zou}}, \bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont {Donner}}, \
+  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kurths}},\
+  }\bibfield  {title} {\enquote {\bibinfo {title} {{Analyzing long-term
+  correlated stochastic processes by means of recurrence networks: Potentials
+  and pitfalls}},}\ }\href {\doibase 10.1103/PhysRevE.91.022926} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf {\bibinfo {volume}
+  {91}},\ \bibinfo {pages} {022926} (\bibinfo {year} {2015})},\ \Eprint
+  {http://arxiv.org/abs/1409.3613} {1409.3613} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {R{\"o}ssler}(1976)}]{Roessler1976}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~E.}\ \bibnamefont
+  {R{\"o}ssler}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {An equation
+  for continuous chaos},}\ }\href {\doibase 10.1016/0375-9601(76)90101-8}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Lett. A}\ }\textbf
+  {\bibinfo {volume} {57}},\ \bibinfo {pages} {397--398} (\bibinfo {year}
+  {1976})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Read}\ \emph {et~al.}(1992)\citenamefont {Read},
+  \citenamefont {Bel}, \citenamefont {Johnson},\ and\ \citenamefont
+  {Small}}]{Read_jfm_1992}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont
+  {Read}}, \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont {Bel}},
+  \bibinfo {author} {\bibfnamefont {D.~W.}\ \bibnamefont {Johnson}}, \ and\
+  \bibinfo {author} {\bibfnamefont {R.~M.}\ \bibnamefont {Small}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {Quasi-periodic and chaotic flow regimes
+  in a thermally driven, rotating fluid a nnulus},}\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Journal of Fluid Mechanics}\ }\textbf
+  {\bibinfo {volume} {238}},\ \bibinfo {pages} {599--632} (\bibinfo {year}
+  {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zou}\ \emph {et~al.}(2008)\citenamefont {Zou},
+  \citenamefont {Thiel}, \citenamefont {Romano}, \citenamefont {Read},\ and\
+  \citenamefont {Kurths}}]{ZouEPJST2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Zou}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Thiel}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Romano}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Read}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Recurrence analysis of quasiperiodicity in experimental
+  fluid data},}\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Eur. Phys. J. Spec. Top.}\ }\textbf {\bibinfo {volume} {164}},\ \bibinfo
+  {pages} {23--33} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thiel}\ \emph {et~al.}(2004)\citenamefont {Thiel},
+  \citenamefont {Romano}, \citenamefont {Read},\ and\ \citenamefont
+  {Kurths}}]{thiel2004a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Thiel}}, \bibinfo {author} {\bibfnamefont {M.~C.}\ \bibnamefont {Romano}},
+  \bibinfo {author} {\bibfnamefont {P.~L.}\ \bibnamefont {Read}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Kurths}},\ }\bibfield
+  {title} {\enquote {\bibinfo {title} {{Estimation of dynamical invariants
+  without embedding by recurrence plots}},}\ }\href {\doibase
+  10.1063/1.1667633} {\bibfield  {journal} {\bibinfo  {journal} {Chaos}\
+  }\textbf {\bibinfo {volume} {14}},\ \bibinfo {pages} {234--243} (\bibinfo
+  {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Goldberger}\ \emph {et~al.}(2000)\citenamefont
+  {Goldberger}, \citenamefont {Amaral}, \citenamefont {Glass}, \citenamefont
+  {Hausdorff}, \citenamefont {Ivanov}, \citenamefont {Mark}, \citenamefont
+  {Mietus}, \citenamefont {Moody}, \citenamefont {Peng},\ and\ \citenamefont
+  {Stanley}}]{GoldbergerMITBIH2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~L.}\ \bibnamefont
+  {Goldberger}}, \bibinfo {author} {\bibfnamefont {L.~A.~N.}\ \bibnamefont
+  {Amaral}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Glass}},
+  \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Hausdorff}}, \bibinfo
+  {author} {\bibfnamefont {P.~C.}\ \bibnamefont {Ivanov}}, \bibinfo {author}
+  {\bibfnamefont {R.~G.}\ \bibnamefont {Mark}}, \bibinfo {author}
+  {\bibfnamefont {J.~E.}\ \bibnamefont {Mietus}}, \bibinfo {author}
+  {\bibfnamefont {G.~B.}\ \bibnamefont {Moody}}, \bibinfo {author}
+  {\bibfnamefont {C.-K.}\ \bibnamefont {Peng}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {H.~E.}\ \bibnamefont {Stanley}},\ }\bibfield  {title}
+  {\enquote {\bibinfo {title} {Physiobank, physiotoolkit, and physionet},}\
+  }\href {\doibase 10.1161/01.CIR.101.23.e215} {\bibfield  {journal} {\bibinfo
+  {journal} {Circulation}\ }\textbf {\bibinfo {volume} {101}},\ \bibinfo
+  {pages} {e215--e220} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Small}\ \emph {et~al.}(2002)\citenamefont {Small},
+  \citenamefont {Yu}, \citenamefont {Simonotto}, \citenamefont {Harrison},
+  \citenamefont {Grubb},\ and\ \citenamefont {Fox}}]{smallCSF2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Small}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Yu}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Simonotto}}, \bibinfo {author}
+  {\bibfnamefont {R.~G.}\ \bibnamefont {Harrison}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Grubb}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {K.}~\bibnamefont {Fox}},\ }\bibfield  {title} {\enquote
+  {\bibinfo {title} {Uncovering non-linear structure in human ecg
+  recordings},}\ }\href {\doibase
+  https://doi.org/10.1016/S0960-0779(01)00168-0} {\bibfield  {journal}
+  {\bibinfo  {journal} {Chaos, Solitons \& Fractals}\ }\textbf {\bibinfo
+  {volume} {13}},\ \bibinfo {pages} {1755 -- 1762} (\bibinfo {year}
+  {2002})}\BibitemShut {NoStop}%
+\end{thebibliography}%
 
 \end{document}

@@ -32,7 +32,7 @@ full : full_revision clean
 
 full_revision : $(SRCS)
 	$(LATEX)  $(SRCNAME)		 # Create   *.aux
-	$(BIBTEX) $(SRCNAME)
+#	$(BIBTEX) $(SRCNAME)
 	$(LATEX)  $(SRCNAME)		 # Finalize *.aux
 	$(LATEX)  $(SRCNAME)
 #	$(LATEX)  $(SRCNAME)
